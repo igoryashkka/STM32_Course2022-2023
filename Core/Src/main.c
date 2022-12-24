@@ -40,6 +40,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim10;
 
 /* USER CODE BEGIN PV */
 
@@ -48,12 +49,15 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_TIM10_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int8_t counter10tim = 0;
+
 
 /* USER CODE END 0 */
 
@@ -85,8 +89,9 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
-
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,18 +104,9 @@ int main(void)
 		
 		if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0)==1)	
 		{
-			HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_11);
-			HAL_Delay(500);
-			HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_12);
-			HAL_Delay(500);
-			HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_13);
-			HAL_Delay(500);
-			HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_14);
-			HAL_Delay(500);
-			HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_15);
-			HAL_Delay(500);
-	
+		HAL_TIM_Base_Start_IT(&htim10);
 		}	else {
+			counter10tim=0;
 		HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_12|GPIO_PIN_11,GPIO_PIN_RESET);
 		}
 		
@@ -156,12 +152,43 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV8;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_3) != HAL_OK)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief TIM10 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM10_Init(void)
+{
+
+  /* USER CODE BEGIN TIM10_Init 0 */
+
+  /* USER CODE END TIM10_Init 0 */
+
+  /* USER CODE BEGIN TIM10_Init 1 */
+
+  /* USER CODE END TIM10_Init 1 */
+  htim10.Instance = TIM10;
+  htim10.Init.Prescaler = 24999;
+  htim10.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim10.Init.Period = 2499;
+  htim10.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim10.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim10) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM10_Init 2 */
+
+  /* USER CODE END TIM10_Init 2 */
+
 }
 
 /**

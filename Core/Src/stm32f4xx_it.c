@@ -36,8 +36,8 @@
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
+/* USER CODE BEGIN PM */  
+extern int8_t counter10tim;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -56,7 +56,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern TIM_HandleTypeDef htim10;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -198,6 +198,58 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f4xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief This function handles TIM1 update interrupt and TIM10 global interrupt.
+  */
+void TIM1_UP_TIM10_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 0 */
+
+	
+	
+  /* USER CODE END TIM1_UP_TIM10_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim10);
+  /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 1 */
+	//HAL_GPIO_TogglePin(GPIOD,GPIO_PIN_13);
+	
+		switch(counter10tim){
+			case 0:
+				HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET);
+			
+		  break;
+				
+			case 1:
+				HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_SET);
+		  break;
+			
+			
+			case 2:
+				HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,GPIO_PIN_SET);
+		  break;
+			
+			
+			
+			case 3:
+				HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,GPIO_PIN_SET);
+		  break;
+		
+		}
+		
+		
+		if(counter10tim < 3) counter10tim++;
+	
+	
+		
+			
+		
+	
+  /* USER CODE END TIM1_UP_TIM10_IRQn 1 */
+}
 
 /* USER CODE BEGIN 1 */
 

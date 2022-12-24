@@ -4,10 +4,15 @@ Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
 
 Section Cross References
 
+    main.o(.text.port_init) refers to stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd) for RCC_AHB1PeriphClockCmd
+    main.o(.text.port_init) refers to stm32f4xx_gpio.o(.text.GPIO_Init) for GPIO_Init
     main.o(.ARM.exidx.text.port_init) refers to main.o(.text.port_init) for [Anonymous Symbol]
     main.o(.ARM.exidx.text.delay) refers to main.o(.text.delay) for [Anonymous Symbol]
     main.o(.text.main) refers to main.o(.text.port_init) for port_init
+    main.o(.text.main) refers to stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    main.o(.text.main) refers to stm32f4xx_gpio.o(.text.GPIO_SetBits) for GPIO_SetBits
     main.o(.text.main) refers to main.o(.text.delay) for delay
+    main.o(.text.main) refers to stm32f4xx_gpio.o(.text.GPIO_ResetBits) for GPIO_ResetBits
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     misc.o(.ARM.exidx.text.NVIC_PriorityGroupConfig) refers to misc.o(.text.NVIC_PriorityGroupConfig) for [Anonymous Symbol]
     misc.o(.ARM.exidx.text.NVIC_Init) refers to misc.o(.text.NVIC_Init) for [Anonymous Symbol]
@@ -1489,13 +1494,11 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_gpio.o(.text), (0 bytes).
     Removing stm32f4xx_gpio.o(.text.GPIO_DeInit), (430 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_DeInit), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_Init), (246 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_Init), (8 bytes).
     Removing stm32f4xx_gpio.o(.text.GPIO_StructInit), (34 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_StructInit), (8 bytes).
     Removing stm32f4xx_gpio.o(.text.GPIO_PinLockConfig), (60 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_PinLockConfig), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit), (52 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadInputDataBit), (8 bytes).
     Removing stm32f4xx_gpio.o(.text.GPIO_ReadInputData), (14 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadInputData), (8 bytes).
@@ -1503,9 +1506,7 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadOutputDataBit), (8 bytes).
     Removing stm32f4xx_gpio.o(.text.GPIO_ReadOutputData), (14 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadOutputData), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_SetBits), (20 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_SetBits), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_ResetBits), (22 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ResetBits), (8 bytes).
     Removing stm32f4xx_gpio.o(.text.GPIO_WriteBit), (46 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_WriteBit), (8 bytes).
@@ -1809,7 +1810,6 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_LTDCCLKDivConfig), (8 bytes).
     Removing stm32f4xx_rcc.o(.text.RCC_TIMCLKPresConfig), (20 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_TIMCLKPresConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB1PeriphClockCmd), (8 bytes).
     Removing stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB2PeriphClockCmd), (8 bytes).
@@ -2408,7 +2408,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f4xx.o(.rodata.AHBPrescTable), (16 bytes).
     Removing system_stm32f4xx.o(.rodata.APBPrescTable), (8 bytes).
 
-1398 unused section(s) (total 61316 bytes) removed from the image.
+1393 unused section(s) (total 60920 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2567,12 +2567,17 @@ Image Symbol Table
     .text                                    0x080002c8   Section        0  sys_exit.o(.text)
     .text                                    0x080002d4   Section        2  use_no_semi.o(.text)
     .text                                    0x080002d6   Section        0  indicate_semi.o(.text)
-    [Anonymous Symbol]                       0x080002d8   Section        0  system_stm32f4xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x080002ec   Section        0  main.o(.text.delay)
-    [Anonymous Symbol]                       0x08000308   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x0800036c   Section        0  main.o(.text.port_init)
-    $v0                                      0x080003a4   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x080003a4   Section       26  fpinit.o(x$fpl$fpinit)
+    [Anonymous Symbol]                       0x080002d8   Section        0  stm32f4xx_gpio.o(.text.GPIO_Init)
+    [Anonymous Symbol]                       0x080003d0   Section        0  stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit)
+    [Anonymous Symbol]                       0x08000404   Section        0  stm32f4xx_gpio.o(.text.GPIO_ResetBits)
+    [Anonymous Symbol]                       0x0800041c   Section        0  stm32f4xx_gpio.o(.text.GPIO_SetBits)
+    [Anonymous Symbol]                       0x08000430   Section        0  stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd)
+    [Anonymous Symbol]                       0x08000468   Section        0  system_stm32f4xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x0800047c   Section        0  main.o(.text.delay)
+    [Anonymous Symbol]                       0x08000498   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x08000568   Section        0  main.o(.text.port_init)
+    $v0                                      0x080005c8   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x080005c8   Section       26  fpinit.o(x$fpl$fpinit)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000060   Data         512  startup_stm32f411xe.o(HEAP)
     HEAP                                     0x20000060   Section      512  startup_stm32f411xe.o(HEAP)
@@ -2743,15 +2748,20 @@ Image Symbol Table
     __I$use$semihosting                      0x080002d5   Thumb Code     0  use_no_semi.o(.text)
     __use_no_semihosting_swi                 0x080002d5   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x080002d7   Thumb Code     0  indicate_semi.o(.text)
-    SystemInit                               0x080002d9   Thumb Code    18  system_stm32f4xx.o(.text.SystemInit)
-    delay                                    0x080002ed   Thumb Code    26  main.o(.text.delay)
-    main                                     0x08000309   Thumb Code   100  main.o(.text.main)
-    port_init                                0x0800036d   Thumb Code    56  main.o(.text.port_init)
-    _fp_init                                 0x080003a5   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x080003bd   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x080003bd   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x080003c0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080003d0   Number         0  anon$$obj.o(Region$$Table)
+    GPIO_Init                                0x080002d9   Thumb Code   246  stm32f4xx_gpio.o(.text.GPIO_Init)
+    GPIO_ReadInputDataBit                    0x080003d1   Thumb Code    52  stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit)
+    GPIO_ResetBits                           0x08000405   Thumb Code    22  stm32f4xx_gpio.o(.text.GPIO_ResetBits)
+    GPIO_SetBits                             0x0800041d   Thumb Code    20  stm32f4xx_gpio.o(.text.GPIO_SetBits)
+    RCC_AHB1PeriphClockCmd                   0x08000431   Thumb Code    56  stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd)
+    SystemInit                               0x08000469   Thumb Code    18  system_stm32f4xx.o(.text.SystemInit)
+    delay                                    0x0800047d   Thumb Code    26  main.o(.text.delay)
+    main                                     0x08000499   Thumb Code   208  main.o(.text.main)
+    port_init                                0x08000569   Thumb Code    96  main.o(.text.port_init)
+    _fp_init                                 0x080005c9   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x080005e1   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x080005e1   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x080005e4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080005f4   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
 
@@ -2763,9 +2773,9 @@ Memory Map of the image
 
   Image Entry point : 0x0800021d
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x000003d0, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000005f4, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000003d0, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000005f4, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2825,23 +2835,30 @@ Memory Map of the image
     0x080002d4   0x080002d4   0x00000002   Code   RO         1730    .text               c_w.l(use_no_semi.o)
     0x080002d6   0x080002d6   0x00000000   Code   RO         1732    .text               c_w.l(indicate_semi.o)
     0x080002d6   0x080002d6   0x00000002   PAD
-    0x080002d8   0x080002d8   0x00000012   Code   RO         1609    .text.SystemInit    system_stm32f4xx.o
-    0x080002ea   0x080002ea   0x00000002   PAD
-    0x080002ec   0x080002ec   0x0000001a   Code   RO            4    .text.delay         main.o
-    0x08000306   0x08000306   0x00000002   PAD
-    0x08000308   0x08000308   0x00000064   Code   RO            6    .text.main          main.o
-    0x0800036c   0x0800036c   0x00000038   Code   RO            2    .text.port_init     main.o
-    0x080003a4   0x080003a4   0x0000001a   Code   RO         1713    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x080003be   0x080003be   0x00000002   PAD
-    0x080003c0   0x080003c0   0x00000010   Data   RO         1788    Region$$Table       anon$$obj.o
+    0x080002d8   0x080002d8   0x000000f6   Code   RO          585    .text.GPIO_Init     stm32f4xx_gpio.o
+    0x080003ce   0x080003ce   0x00000002   PAD
+    0x080003d0   0x080003d0   0x00000034   Code   RO          591    .text.GPIO_ReadInputDataBit  stm32f4xx_gpio.o
+    0x08000404   0x08000404   0x00000016   Code   RO          601    .text.GPIO_ResetBits  stm32f4xx_gpio.o
+    0x0800041a   0x0800041a   0x00000002   PAD
+    0x0800041c   0x0800041c   0x00000014   Code   RO          599    .text.GPIO_SetBits  stm32f4xx_gpio.o
+    0x08000430   0x08000430   0x00000038   Code   RO          954    .text.RCC_AHB1PeriphClockCmd  stm32f4xx_rcc.o
+    0x08000468   0x08000468   0x00000012   Code   RO         1609    .text.SystemInit    system_stm32f4xx.o
+    0x0800047a   0x0800047a   0x00000002   PAD
+    0x0800047c   0x0800047c   0x0000001a   Code   RO            4    .text.delay         main.o
+    0x08000496   0x08000496   0x00000002   PAD
+    0x08000498   0x08000498   0x000000d0   Code   RO            6    .text.main          main.o
+    0x08000568   0x08000568   0x00000060   Code   RO            2    .text.port_init     main.o
+    0x080005c8   0x080005c8   0x0000001a   Code   RO         1713    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x080005e2   0x080005e2   0x00000002   PAD
+    0x080005e4   0x080005e4   0x00000010   Data   RO         1788    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080003d0, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080005f4, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080003d0, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080005f4, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2857,14 +2874,16 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       182          0          0          0          0       1888   main.o
+       330          0          0          0          0       1944   main.o
         64         26        408          0       1536        856   startup_stm32f411xe.o
+       340          0          0          0          0       4380   stm32f4xx_gpio.o
+        56          0          0          0          0       9745   stm32f4xx_rcc.o
         18          0          0          0          0       2600   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-       268         26        424          0       1536       5344   Object Totals
+       816         26        424          0       1536      19525   Object Totals
          0          0         16          0          0          0   (incl. Generated)
-         4          0          0          0          0          0   (incl. Padding)
+         8          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2912,15 +2931,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       552         42        424          0       1632       5800   Grand Totals
-       552         42        424          0       1632       5800   ELF Image Totals
-       552         42        424          0          0          0   ROM Totals
+      1100         42        424          0       1632      19941   Grand Totals
+      1100         42        424          0       1632      19941   ELF Image Totals
+      1100         42        424          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                  976 (   0.95kB)
+    Total RO  Size (Code + RO Data)                 1524 (   1.49kB)
     Total RW  Size (RW Data + ZI Data)              1632 (   1.59kB)
-    Total ROM Size (Code + RO Data + RW Data)        976 (   0.95kB)
+    Total ROM Size (Code + RO Data + RW Data)       1524 (   1.49kB)
 
 ==============================================================================
 

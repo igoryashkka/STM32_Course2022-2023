@@ -1,18 +1,22 @@
-//#include "stm32f4xx.h"
- #include "stm32f4xx.h"
+#include "main.h"
 
 
 int main(void){
+	port_init();
 	
-	RCC->AHB1ENR  |= RCC_AHB1ENR_GPIODEN;
- 	GPIOD->MODER = 0x40000000;
-	//GPIOD->MODER = 0x55000000;
-	GPIOD->OTYPER = 0;
-	GPIOD->OSPEEDR = 0;
-	GPIOD->ODR = 0x8000;
 while(1){
 
-
+	
+		GPIOD->ODR = (1<<PORT12) | (1<<PORT13);
+		delay(2000000);
+		GPIOD->ODR = (1<<PORT13) | (1<<PORT14);
+		delay(2000000);
+		GPIOD->ODR = (1<<PORT14) | (1<<PORT15);
+		delay(2000000);
+		GPIOD->ODR = (1<<PORT15) | (1<<PORT12);
+		delay(2000000);
+		GPIOD->ODR = (1<<PORT0);
+		delay(2000000);
 }
 
 }

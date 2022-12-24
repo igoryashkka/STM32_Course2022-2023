@@ -4,6 +4,10 @@ Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
 
 Section Cross References
 
+    main.o(.ARM.exidx.text.port_init) refers to main.o(.text.port_init) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.delay) refers to main.o(.text.delay) for [Anonymous Symbol]
+    main.o(.text.main) refers to main.o(.text.port_init) for port_init
+    main.o(.text.main) refers to main.o(.text.delay) for delay
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
     misc.o(.ARM.exidx.text.NVIC_PriorityGroupConfig) refers to misc.o(.text.NVIC_PriorityGroupConfig) for [Anonymous Symbol]
     misc.o(.ARM.exidx.text.NVIC_Init) refers to misc.o(.text.NVIC_Init) for [Anonymous Symbol]
@@ -103,9 +107,9 @@ Section Cross References
     stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_GetCmdStatus) refers to stm32f4xx_cryp.o(.text.CRYP_GetCmdStatus) for [Anonymous Symbol]
     stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_GetFlagStatus) refers to stm32f4xx_cryp.o(.text.CRYP_GetFlagStatus) for [Anonymous Symbol]
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_KeyStructInit) for CRYP_KeyStructInit
-    stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_KeyInit) for CRYP_KeyInit
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_FIFOFlush) for CRYP_FIFOFlush
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_Init) for CRYP_Init
+    stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_KeyInit) for CRYP_KeyInit
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_Cmd) for CRYP_Cmd
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_GetFlagStatus) for CRYP_GetFlagStatus
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_GetCmdStatus) for CRYP_GetCmdStatus
@@ -113,9 +117,9 @@ Section Cross References
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) refers to stm32f4xx_cryp.o(.text.CRYP_DataOut) for CRYP_DataOut
     stm32f4xx_cryp_aes.o(.ARM.exidx.text.CRYP_AES_ECB) refers to stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB) for [Anonymous Symbol]
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC) refers to stm32f4xx_cryp.o(.text.CRYP_KeyStructInit) for CRYP_KeyStructInit
-    stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC) refers to stm32f4xx_cryp.o(.text.CRYP_KeyInit) for CRYP_KeyInit
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC) refers to stm32f4xx_cryp.o(.text.CRYP_FIFOFlush) for CRYP_FIFOFlush
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC) refers to stm32f4xx_cryp.o(.text.CRYP_Init) for CRYP_Init
+    stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC) refers to stm32f4xx_cryp.o(.text.CRYP_KeyInit) for CRYP_KeyInit
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC) refers to stm32f4xx_cryp.o(.text.CRYP_Cmd) for CRYP_Cmd
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC) refers to stm32f4xx_cryp.o(.text.CRYP_GetFlagStatus) for CRYP_GetFlagStatus
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC) refers to stm32f4xx_cryp.o(.text.CRYP_IVInit) for CRYP_IVInit
@@ -146,8 +150,6 @@ Section Cross References
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_GCM) refers to stm32f4xx_cryp.o(.text.CRYP_DataIn) for CRYP_DataIn
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_GCM) refers to stm32f4xx_cryp.o(.text.CRYP_DataOut) for CRYP_DataOut
     stm32f4xx_cryp_aes.o(.ARM.exidx.text.CRYP_AES_GCM) refers to stm32f4xx_cryp_aes.o(.text.CRYP_AES_GCM) for [Anonymous Symbol]
-    stm32f4xx_cryp_aes.o(.text.CRYP_AES_CCM) refers to rt_memclr.o(.text) for __aeabi_memclr
-    stm32f4xx_cryp_aes.o(.text.CRYP_AES_CCM) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CCM) refers to stm32f4xx_cryp.o(.text.CRYP_KeyStructInit) for CRYP_KeyStructInit
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CCM) refers to stm32f4xx_cryp.o(.text.CRYP_FIFOFlush) for CRYP_FIFOFlush
     stm32f4xx_cryp_aes.o(.text.CRYP_AES_CCM) refers to stm32f4xx_cryp.o(.text.CRYP_KeyInit) for CRYP_KeyInit
@@ -242,7 +244,6 @@ Section Cross References
     stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_ClearITPendingBit) refers to stm32f4xx_dcmi.o(.text.DCMI_ClearITPendingBit) for [Anonymous Symbol]
     stm32f4xx_dma.o(.ARM.exidx.text.DMA_DeInit) refers to stm32f4xx_dma.o(.text.DMA_DeInit) for [Anonymous Symbol]
     stm32f4xx_dma.o(.ARM.exidx.text.DMA_Init) refers to stm32f4xx_dma.o(.text.DMA_Init) for [Anonymous Symbol]
-    stm32f4xx_dma.o(.text.DMA_StructInit) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
     stm32f4xx_dma.o(.ARM.exidx.text.DMA_StructInit) refers to stm32f4xx_dma.o(.text.DMA_StructInit) for [Anonymous Symbol]
     stm32f4xx_dma.o(.ARM.exidx.text.DMA_Cmd) refers to stm32f4xx_dma.o(.text.DMA_Cmd) for [Anonymous Symbol]
     stm32f4xx_dma.o(.ARM.exidx.text.DMA_PeriphIncOffsetSizeConfig) refers to stm32f4xx_dma.o(.text.DMA_PeriphIncOffsetSizeConfig) for [Anonymous Symbol]
@@ -263,16 +264,13 @@ Section Cross References
     stm32f4xx_dma2d.o(.text.DMA2D_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_AHB1PeriphResetCmd) for RCC_AHB1PeriphResetCmd
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_DeInit) refers to stm32f4xx_dma2d.o(.text.DMA2D_DeInit) for [Anonymous Symbol]
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_Init) refers to stm32f4xx_dma2d.o(.text.DMA2D_Init) for [Anonymous Symbol]
-    stm32f4xx_dma2d.o(.text.DMA2D_StructInit) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_StructInit) refers to stm32f4xx_dma2d.o(.text.DMA2D_StructInit) for [Anonymous Symbol]
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_StartTransfer) refers to stm32f4xx_dma2d.o(.text.DMA2D_StartTransfer) for [Anonymous Symbol]
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_AbortTransfer) refers to stm32f4xx_dma2d.o(.text.DMA2D_AbortTransfer) for [Anonymous Symbol]
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_Suspend) refers to stm32f4xx_dma2d.o(.text.DMA2D_Suspend) for [Anonymous Symbol]
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_FGConfig) refers to stm32f4xx_dma2d.o(.text.DMA2D_FGConfig) for [Anonymous Symbol]
-    stm32f4xx_dma2d.o(.text.DMA2D_FG_StructInit) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_FG_StructInit) refers to stm32f4xx_dma2d.o(.text.DMA2D_FG_StructInit) for [Anonymous Symbol]
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_BGConfig) refers to stm32f4xx_dma2d.o(.text.DMA2D_BGConfig) for [Anonymous Symbol]
-    stm32f4xx_dma2d.o(.text.DMA2D_BG_StructInit) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_BG_StructInit) refers to stm32f4xx_dma2d.o(.text.DMA2D_BG_StructInit) for [Anonymous Symbol]
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_FGStart) refers to stm32f4xx_dma2d.o(.text.DMA2D_FGStart) for [Anonymous Symbol]
     stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_BGStart) refers to stm32f4xx_dma2d.o(.text.DMA2D_BGStart) for [Anonymous Symbol]
@@ -460,7 +458,6 @@ Section Cross References
     stm32f4xx_ltdc.o(.text.LTDC_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
     stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_DeInit) refers to stm32f4xx_ltdc.o(.text.LTDC_DeInit) for [Anonymous Symbol]
     stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_Init) refers to stm32f4xx_ltdc.o(.text.LTDC_Init) for [Anonymous Symbol]
-    stm32f4xx_ltdc.o(.text.LTDC_StructInit) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
     stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_StructInit) refers to stm32f4xx_ltdc.o(.text.LTDC_StructInit) for [Anonymous Symbol]
     stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_Cmd) refers to stm32f4xx_ltdc.o(.text.LTDC_Cmd) for [Anonymous Symbol]
     stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_DitherCmd) refers to stm32f4xx_ltdc.o(.text.LTDC_DitherCmd) for [Anonymous Symbol]
@@ -573,6 +570,7 @@ Section Cross References
     stm32f4xx_rtc.o(.text.RTC_RefClockCmd) refers to stm32f4xx_rtc.o(.text.RTC_ExitInitMode) for RTC_ExitInitMode
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_RefClockCmd) refers to stm32f4xx_rtc.o(.text.RTC_RefClockCmd) for [Anonymous Symbol]
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_BypassShadowCmd) refers to stm32f4xx_rtc.o(.text.RTC_BypassShadowCmd) for [Anonymous Symbol]
+    stm32f4xx_rtc.o(.text.RTC_SetTime) refers to stm32f4xx_rtc.o(.text.RTC_Bcd2ToByte) for RTC_Bcd2ToByte
     stm32f4xx_rtc.o(.text.RTC_SetTime) refers to stm32f4xx_rtc.o(.text.RTC_ByteToBcd2) for RTC_ByteToBcd2
     stm32f4xx_rtc.o(.text.RTC_SetTime) refers to stm32f4xx_rtc.o(.text.RTC_EnterInitMode) for RTC_EnterInitMode
     stm32f4xx_rtc.o(.text.RTC_SetTime) refers to stm32f4xx_rtc.o(.text.RTC_ExitInitMode) for RTC_ExitInitMode
@@ -584,14 +582,16 @@ Section Cross References
     stm32f4xx_rtc.o(.text.RTC_GetTime) refers to stm32f4xx_rtc.o(.text.RTC_Bcd2ToByte) for RTC_Bcd2ToByte
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetTime) refers to stm32f4xx_rtc.o(.text.RTC_GetTime) for [Anonymous Symbol]
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetSubSecond) refers to stm32f4xx_rtc.o(.text.RTC_GetSubSecond) for [Anonymous Symbol]
+    stm32f4xx_rtc.o(.text.RTC_SetDate) refers to stm32f4xx_rtc.o(.text.RTC_Bcd2ToByte) for RTC_Bcd2ToByte
+    stm32f4xx_rtc.o(.text.RTC_SetDate) refers to stm32f4xx_rtc.o(.text.RTC_ByteToBcd2) for RTC_ByteToBcd2
     stm32f4xx_rtc.o(.text.RTC_SetDate) refers to stm32f4xx_rtc.o(.text.RTC_EnterInitMode) for RTC_EnterInitMode
     stm32f4xx_rtc.o(.text.RTC_SetDate) refers to stm32f4xx_rtc.o(.text.RTC_ExitInitMode) for RTC_ExitInitMode
     stm32f4xx_rtc.o(.text.RTC_SetDate) refers to stm32f4xx_rtc.o(.text.RTC_WaitForSynchro) for RTC_WaitForSynchro
-    stm32f4xx_rtc.o(.text.RTC_SetDate) refers to stm32f4xx_rtc.o(.text.RTC_ByteToBcd2) for RTC_ByteToBcd2
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_SetDate) refers to stm32f4xx_rtc.o(.text.RTC_SetDate) for [Anonymous Symbol]
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_DateStructInit) refers to stm32f4xx_rtc.o(.text.RTC_DateStructInit) for [Anonymous Symbol]
     stm32f4xx_rtc.o(.text.RTC_GetDate) refers to stm32f4xx_rtc.o(.text.RTC_Bcd2ToByte) for RTC_Bcd2ToByte
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetDate) refers to stm32f4xx_rtc.o(.text.RTC_GetDate) for [Anonymous Symbol]
+    stm32f4xx_rtc.o(.text.RTC_SetAlarm) refers to stm32f4xx_rtc.o(.text.RTC_Bcd2ToByte) for RTC_Bcd2ToByte
     stm32f4xx_rtc.o(.text.RTC_SetAlarm) refers to stm32f4xx_rtc.o(.text.RTC_ByteToBcd2) for RTC_ByteToBcd2
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_SetAlarm) refers to stm32f4xx_rtc.o(.text.RTC_SetAlarm) for [Anonymous Symbol]
     stm32f4xx_rtc.o(.ARM.exidx.text.RTC_AlarmStructInit) refers to stm32f4xx_rtc.o(.text.RTC_AlarmStructInit) for [Anonymous Symbol]
@@ -731,8 +731,8 @@ Section Cross References
     stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_ETH_MediaInterfaceConfig) refers to stm32f4xx_syscfg.o(.text.SYSCFG_ETH_MediaInterfaceConfig) for [Anonymous Symbol]
     stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_CompensationCellCmd) refers to stm32f4xx_syscfg.o(.text.SYSCFG_CompensationCellCmd) for [Anonymous Symbol]
     stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_GetCompensationCellStatus) refers to stm32f4xx_syscfg.o(.text.SYSCFG_GetCompensationCellStatus) for [Anonymous Symbol]
-    stm32f4xx_tim.o(.text.TIM_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
     stm32f4xx_tim.o(.text.TIM_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f4xx_tim.o(.text.TIM_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_DeInit) refers to stm32f4xx_tim.o(.text.TIM_DeInit) for [Anonymous Symbol]
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_TimeBaseInit) refers to stm32f4xx_tim.o(.text.TIM_TimeBaseInit) for [Anonymous Symbol]
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_TimeBaseStructInit) refers to stm32f4xx_tim.o(.text.TIM_TimeBaseStructInit) for [Anonymous Symbol]
@@ -785,10 +785,10 @@ Section Cross References
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_CCxNCmd) refers to stm32f4xx_tim.o(.text.TIM_CCxNCmd) for [Anonymous Symbol]
     stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TI1_Config) for TI1_Config
     stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TIM_SetIC1Prescaler) for TIM_SetIC1Prescaler
-    stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TI3_Config) for TI3_Config
-    stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TIM_SetIC3Prescaler) for TIM_SetIC3Prescaler
     stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TI2_Config) for TI2_Config
     stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
+    stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TI3_Config) for TI3_Config
+    stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TIM_SetIC3Prescaler) for TIM_SetIC3Prescaler
     stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TI4_Config) for TI4_Config
     stm32f4xx_tim.o(.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TIM_SetIC4Prescaler) for TIM_SetIC4Prescaler
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_ICInit) refers to stm32f4xx_tim.o(.text.TIM_ICInit) for [Anonymous Symbol]
@@ -801,10 +801,10 @@ Section Cross References
     stm32f4xx_tim.o(.ARM.exidx.text.TI4_Config) refers to stm32f4xx_tim.o(.text.TI4_Config) for [Anonymous Symbol]
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetIC4Prescaler) refers to stm32f4xx_tim.o(.text.TIM_SetIC4Prescaler) for [Anonymous Symbol]
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_ICStructInit) refers to stm32f4xx_tim.o(.text.TIM_ICStructInit) for [Anonymous Symbol]
-    stm32f4xx_tim.o(.text.TIM_PWMIConfig) refers to stm32f4xx_tim.o(.text.TI2_Config) for TI2_Config
-    stm32f4xx_tim.o(.text.TIM_PWMIConfig) refers to stm32f4xx_tim.o(.text.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
     stm32f4xx_tim.o(.text.TIM_PWMIConfig) refers to stm32f4xx_tim.o(.text.TI1_Config) for TI1_Config
     stm32f4xx_tim.o(.text.TIM_PWMIConfig) refers to stm32f4xx_tim.o(.text.TIM_SetIC1Prescaler) for TIM_SetIC1Prescaler
+    stm32f4xx_tim.o(.text.TIM_PWMIConfig) refers to stm32f4xx_tim.o(.text.TI2_Config) for TI2_Config
+    stm32f4xx_tim.o(.text.TIM_PWMIConfig) refers to stm32f4xx_tim.o(.text.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_PWMIConfig) refers to stm32f4xx_tim.o(.text.TIM_PWMIConfig) for [Anonymous Symbol]
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetCapture1) refers to stm32f4xx_tim.o(.text.TIM_GetCapture1) for [Anonymous Symbol]
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetCapture2) refers to stm32f4xx_tim.o(.text.TIM_GetCapture2) for [Anonymous Symbol]
@@ -843,8 +843,8 @@ Section Cross References
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_EncoderInterfaceConfig) refers to stm32f4xx_tim.o(.text.TIM_EncoderInterfaceConfig) for [Anonymous Symbol]
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectHallSensor) refers to stm32f4xx_tim.o(.text.TIM_SelectHallSensor) for [Anonymous Symbol]
     stm32f4xx_tim.o(.ARM.exidx.text.TIM_RemapConfig) refers to stm32f4xx_tim.o(.text.TIM_RemapConfig) for [Anonymous Symbol]
-    stm32f4xx_usart.o(.text.USART_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
     stm32f4xx_usart.o(.text.USART_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f4xx_usart.o(.text.USART_DeInit) refers to stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
     stm32f4xx_usart.o(.ARM.exidx.text.USART_DeInit) refers to stm32f4xx_usart.o(.text.USART_DeInit) for [Anonymous Symbol]
     stm32f4xx_usart.o(.text.USART_Init) refers to stm32f4xx_rcc.o(.text.RCC_GetClocksFreq) for RCC_GetClocksFreq
     stm32f4xx_usart.o(.ARM.exidx.text.USART_Init) refers to stm32f4xx_usart.o(.text.USART_Init) for [Anonymous Symbol]
@@ -898,8 +898,6 @@ Section Cross References
     system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.data.SystemCoreClock) for SystemCoreClock
     system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.rodata.AHBPrescTable) for AHBPrescTable
     system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
-    rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
-    rt_memclr.o(.text) refers to rt_memclr_w.o(.text) for _memset_w
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
@@ -1012,453 +1010,455 @@ Section Cross References
 Removing Unused input sections from the image.
 
     Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.port_init), (8 bytes).
+    Removing main.o(.ARM.exidx.text.delay), (8 bytes).
     Removing main.o(.ARM.exidx.text.main), (8 bytes).
     Removing main.o(.ARM.use_no_argv), (4 bytes).
     Removing misc.o(.text), (0 bytes).
-    Removing misc.o(.text.NVIC_PriorityGroupConfig), (20 bytes).
+    Removing misc.o(.text.NVIC_PriorityGroupConfig), (28 bytes).
     Removing misc.o(.ARM.exidx.text.NVIC_PriorityGroupConfig), (8 bytes).
-    Removing misc.o(.text.NVIC_Init), (98 bytes).
+    Removing misc.o(.text.NVIC_Init), (206 bytes).
     Removing misc.o(.ARM.exidx.text.NVIC_Init), (8 bytes).
-    Removing misc.o(.text.NVIC_SetVectorTable), (24 bytes).
+    Removing misc.o(.text.NVIC_SetVectorTable), (36 bytes).
     Removing misc.o(.ARM.exidx.text.NVIC_SetVectorTable), (8 bytes).
-    Removing misc.o(.text.NVIC_SystemLPConfig), (24 bytes).
+    Removing misc.o(.text.NVIC_SystemLPConfig), (62 bytes).
     Removing misc.o(.ARM.exidx.text.NVIC_SystemLPConfig), (8 bytes).
-    Removing misc.o(.text.SysTick_CLKSourceConfig), (24 bytes).
+    Removing misc.o(.text.SysTick_CLKSourceConfig), (52 bytes).
     Removing misc.o(.ARM.exidx.text.SysTick_CLKSourceConfig), (8 bytes).
     Removing stm32f4xx_adc.o(.text), (0 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_DeInit), (24 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_DeInit), (28 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_DeInit), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_Init), (88 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_Init), (158 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_Init), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_StructInit), (18 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_StructInit), (40 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_StructInit), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_CommonInit), (50 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_CommonInit), (68 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_CommonInit), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_CommonStructInit), (12 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_CommonStructInit), (26 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_CommonStructInit), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_Cmd), (16 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_Cmd), (44 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_Cmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_AnalogWatchdogCmd), (18 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_AnalogWatchdogCmd), (48 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_AnalogWatchdogCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_AnalogWatchdogThresholdsConfig), (6 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_AnalogWatchdogThresholdsConfig), (32 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_AnalogWatchdogThresholdsConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_AnalogWatchdogSingleChannelConfig), (12 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_AnalogWatchdogSingleChannelConfig), (46 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_AnalogWatchdogSingleChannelConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_TempSensorVrefintCmd), (26 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_TempSensorVrefintCmd), (54 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_TempSensorVrefintCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_VBATCmd), (26 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_VBATCmd), (54 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_VBATCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_RegularChannelConfig), (98 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_RegularChannelConfig), (380 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_RegularChannelConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_SoftwareStartConv), (10 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_SoftwareStartConv), (18 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_SoftwareStartConv), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_GetSoftwareStartConvStatus), (8 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_GetSoftwareStartConvStatus), (46 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_GetSoftwareStartConvStatus), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_EOCOnEachRegularChannelCmd), (18 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_EOCOnEachRegularChannelCmd), (44 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_EOCOnEachRegularChannelCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_ContinuousModeCmd), (16 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_ContinuousModeCmd), (44 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_ContinuousModeCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_DiscModeChannelCountConfig), (24 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_DiscModeChannelCountConfig), (56 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_DiscModeChannelCountConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_DiscModeCmd), (18 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_DiscModeCmd), (44 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_DiscModeCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_GetConversionValue), (6 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_GetConversionValue), (14 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_GetConversionValue), (8 bytes).
     Removing stm32f4xx_adc.o(.text.ADC_GetMultiModeConversionValue), (12 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_GetMultiModeConversionValue), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_DMACmd), (18 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_DMACmd), (44 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_DMACmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_DMARequestAfterLastTransferCmd), (18 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_DMARequestAfterLastTransferCmd), (44 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_DMARequestAfterLastTransferCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_MultiModeDMARequestAfterLastTransferCmd), (26 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_MultiModeDMARequestAfterLastTransferCmd), (54 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_MultiModeDMARequestAfterLastTransferCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_InjectedChannelConfig), (80 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_InjectedChannelConfig), (250 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_InjectedChannelConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_InjectedSequencerLengthConfig), (22 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_InjectedSequencerLengthConfig), (56 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_InjectedSequencerLengthConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_SetInjectedOffset), (22 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_SetInjectedOffset), (42 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_SetInjectedOffset), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_ExternalTrigInjectedConvConfig), (12 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_ExternalTrigInjectedConvConfig), (42 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_ExternalTrigInjectedConvConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_ExternalTrigInjectedConvEdgeConfig), (12 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_ExternalTrigInjectedConvEdgeConfig), (42 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_ExternalTrigInjectedConvEdgeConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_SoftwareStartInjectedConv), (10 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_SoftwareStartInjectedConv), (18 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_SoftwareStartInjectedConv), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_GetSoftwareStartInjectedConvCmdStatus), (8 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_GetSoftwareStartInjectedConvCmdStatus), (46 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_GetSoftwareStartInjectedConvCmdStatus), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_AutoInjectedConvCmd), (18 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_AutoInjectedConvCmd), (44 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_AutoInjectedConvCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_InjectedDiscModeCmd), (18 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_InjectedDiscModeCmd), (44 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_InjectedDiscModeCmd), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_GetInjectedConversionValue), (26 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_GetInjectedConversionValue), (38 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_GetInjectedConversionValue), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_ITConfig), (24 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_ITConfig), (66 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_ITConfig), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_GetFlagStatus), (10 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_GetFlagStatus), (52 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_ClearFlag), (6 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_ClearFlag), (22 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_ClearFlag), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_GetITStatus), (24 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_GetITStatus), (82 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_GetITStatus), (8 bytes).
-    Removing stm32f4xx_adc.o(.text.ADC_ClearITPendingBit), (8 bytes).
+    Removing stm32f4xx_adc.o(.text.ADC_ClearITPendingBit), (36 bytes).
     Removing stm32f4xx_adc.o(.ARM.exidx.text.ADC_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_can.o(.text), (0 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_DeInit), (40 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_DeInit), (70 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_DeInit), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_Init), (222 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_Init), (438 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_Init), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_FilterInit), (172 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_FilterInit), (346 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_FilterInit), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_StructInit), (20 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_StructInit), (60 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_StructInit), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_SlaveStartBank), (44 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_SlaveStartBank), (56 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_SlaveStartBank), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_DBGFreeze), (18 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_DBGFreeze), (44 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_DBGFreeze), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_TTComModeCmd), (92 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_TTComModeCmd), (128 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_TTComModeCmd), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_Transmit), (174 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_Transmit), (322 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_Transmit), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_TransmitStatus), (148 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_TransmitStatus), (248 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_TransmitStatus), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_CancelTransmit), (32 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_CancelTransmit), (70 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_CancelTransmit), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_Receive), (158 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_Receive), (332 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_Receive), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_FIFORelease), (16 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_FIFORelease), (36 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_FIFORelease), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_MessagePending), (26 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_MessagePending), (78 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_MessagePending), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_OperatingModeRequest), (142 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_OperatingModeRequest), (342 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_OperatingModeRequest), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_Sleep), (26 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_Sleep), (56 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_Sleep), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_WakeUp), (40 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_WakeUp), (102 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_WakeUp), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_GetLastErrorCode), (8 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_GetLastErrorCode), (30 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_GetLastErrorCode), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_GetReceiveErrorCounter), (6 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_GetReceiveErrorCounter), (28 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_GetReceiveErrorCounter), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_GetLSBTransmitErrorCounter), (8 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_GetLSBTransmitErrorCounter), (28 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_GetLSBTransmitErrorCounter), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_ITConfig), (16 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_ITConfig), (46 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_ITConfig), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_GetFlagStatus), (54 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_GetFlagStatus), (232 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_ClearFlag), (48 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_ClearFlag), (118 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_ClearFlag), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_GetITStatus), (264 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_GetITStatus), (412 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_GetITStatus), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CheckITStatus), (8 bytes).
+    Removing stm32f4xx_can.o(.text.CheckITStatus), (46 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CheckITStatus), (8 bytes).
-    Removing stm32f4xx_can.o(.text.CAN_ClearITPendingBit), (174 bytes).
+    Removing stm32f4xx_can.o(.text.CAN_ClearITPendingBit), (238 bytes).
     Removing stm32f4xx_can.o(.ARM.exidx.text.CAN_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_cec.o(.text), (0 bytes).
     Removing stm32f4xx_crc.o(.text), (0 bytes).
     Removing stm32f4xx_crc.o(.text.CRC_ResetDR), (14 bytes).
     Removing stm32f4xx_crc.o(.ARM.exidx.text.CRC_ResetDR), (8 bytes).
-    Removing stm32f4xx_crc.o(.text.CRC_CalcCRC), (14 bytes).
+    Removing stm32f4xx_crc.o(.text.CRC_CalcCRC), (22 bytes).
     Removing stm32f4xx_crc.o(.ARM.exidx.text.CRC_CalcCRC), (8 bytes).
-    Removing stm32f4xx_crc.o(.text.CRC_CalcBlockCRC), (26 bytes).
+    Removing stm32f4xx_crc.o(.text.CRC_CalcBlockCRC), (64 bytes).
     Removing stm32f4xx_crc.o(.ARM.exidx.text.CRC_CalcBlockCRC), (8 bytes).
     Removing stm32f4xx_crc.o(.text.CRC_GetCRC), (12 bytes).
     Removing stm32f4xx_crc.o(.ARM.exidx.text.CRC_GetCRC), (8 bytes).
-    Removing stm32f4xx_crc.o(.text.CRC_SetIDRegister), (12 bytes).
+    Removing stm32f4xx_crc.o(.text.CRC_SetIDRegister), (24 bytes).
     Removing stm32f4xx_crc.o(.ARM.exidx.text.CRC_SetIDRegister), (8 bytes).
     Removing stm32f4xx_crc.o(.text.CRC_GetIDRegister), (12 bytes).
     Removing stm32f4xx_crc.o(.ARM.exidx.text.CRC_GetIDRegister), (8 bytes).
     Removing stm32f4xx_cryp.o(.text), (0 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_DeInit), (20 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_DeInit), (26 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_DeInit), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_Init), (88 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_Init), (146 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_Init), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_StructInit), (12 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_StructInit), (26 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_StructInit), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_KeyInit), (46 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_KeyInit), (104 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_KeyInit), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_KeyStructInit), (20 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_KeyStructInit), (42 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_KeyStructInit), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_IVInit), (22 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_IVInit), (56 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_IVInit), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_IVStructInit), (12 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_IVStructInit), (26 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_IVStructInit), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_PhaseConfig), (18 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_PhaseConfig), (42 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_PhaseConfig), (8 bytes).
     Removing stm32f4xx_cryp.o(.text.CRYP_FIFOFlush), (16 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_FIFOFlush), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_Cmd), (24 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_Cmd), (50 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_Cmd), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_DataIn), (10 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_DataIn), (18 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_DataIn), (8 bytes).
     Removing stm32f4xx_cryp.o(.text.CRYP_DataOut), (10 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_DataOut), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_SaveContext), (280 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_SaveContext), (510 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_SaveContext), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_RestoreContext), (146 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_RestoreContext), (364 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_RestoreContext), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_DMACmd), (26 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_DMACmd), (60 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_DMACmd), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_ITConfig), (26 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_ITConfig), (60 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_ITConfig), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_GetITStatus), (16 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_GetITStatus), (54 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_GetITStatus), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_GetCmdStatus), (14 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_GetCmdStatus), (48 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_GetCmdStatus), (8 bytes).
-    Removing stm32f4xx_cryp.o(.text.CRYP_GetFlagStatus), (28 bytes).
+    Removing stm32f4xx_cryp.o(.text.CRYP_GetFlagStatus), (86 bytes).
     Removing stm32f4xx_cryp.o(.ARM.exidx.text.CRYP_GetFlagStatus), (8 bytes).
     Removing stm32f4xx_cryp_aes.o(.text), (0 bytes).
-    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB), (412 bytes).
+    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_ECB), (780 bytes).
     Removing stm32f4xx_cryp_aes.o(.ARM.exidx.text.CRYP_AES_ECB), (8 bytes).
-    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC), (444 bytes).
+    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_CBC), (844 bytes).
     Removing stm32f4xx_cryp_aes.o(.ARM.exidx.text.CRYP_AES_CBC), (8 bytes).
-    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_CTR), (372 bytes).
+    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_CTR), (740 bytes).
     Removing stm32f4xx_cryp_aes.o(.ARM.exidx.text.CRYP_AES_CTR), (8 bytes).
-    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_GCM), (1070 bytes).
+    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_GCM), (1914 bytes).
     Removing stm32f4xx_cryp_aes.o(.ARM.exidx.text.CRYP_AES_GCM), (8 bytes).
-    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_CCM), (1428 bytes).
+    Removing stm32f4xx_cryp_aes.o(.text.CRYP_AES_CCM), (2490 bytes).
     Removing stm32f4xx_cryp_aes.o(.ARM.exidx.text.CRYP_AES_CCM), (8 bytes).
     Removing stm32f4xx_cryp_des.o(.text), (0 bytes).
-    Removing stm32f4xx_cryp_des.o(.text.CRYP_DES_ECB), (200 bytes).
+    Removing stm32f4xx_cryp_des.o(.text.CRYP_DES_ECB), (340 bytes).
     Removing stm32f4xx_cryp_des.o(.ARM.exidx.text.CRYP_DES_ECB), (8 bytes).
-    Removing stm32f4xx_cryp_des.o(.text.CRYP_DES_CBC), (224 bytes).
+    Removing stm32f4xx_cryp_des.o(.text.CRYP_DES_CBC), (376 bytes).
     Removing stm32f4xx_cryp_des.o(.ARM.exidx.text.CRYP_DES_CBC), (8 bytes).
     Removing stm32f4xx_cryp_tdes.o(.text), (0 bytes).
-    Removing stm32f4xx_cryp_tdes.o(.text.CRYP_TDES_ECB), (220 bytes).
+    Removing stm32f4xx_cryp_tdes.o(.text.CRYP_TDES_ECB), (396 bytes).
     Removing stm32f4xx_cryp_tdes.o(.ARM.exidx.text.CRYP_TDES_ECB), (8 bytes).
-    Removing stm32f4xx_cryp_tdes.o(.text.CRYP_TDES_CBC), (248 bytes).
+    Removing stm32f4xx_cryp_tdes.o(.text.CRYP_TDES_CBC), (432 bytes).
     Removing stm32f4xx_cryp_tdes.o(.ARM.exidx.text.CRYP_TDES_CBC), (8 bytes).
     Removing stm32f4xx_dac.o(.text), (0 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_DeInit), (24 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_DeInit), (28 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_DeInit), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_Init), (52 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_Init), (84 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_Init), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_StructInit), (12 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_StructInit), (26 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_StructInit), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_Cmd), (30 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_Cmd), (68 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_Cmd), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_SoftwareTriggerCmd), (32 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_SoftwareTriggerCmd), (72 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_SoftwareTriggerCmd), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_DualSoftwareTriggerCmd), (24 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_DualSoftwareTriggerCmd), (54 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_DualSoftwareTriggerCmd), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_WaveGenerationCmd), (28 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_WaveGenerationCmd), (70 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_WaveGenerationCmd), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_SetChannel1Data), (32 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_SetChannel1Data), (44 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_SetChannel1Data), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_SetChannel2Data), (32 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_SetChannel2Data), (44 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_SetChannel2Data), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_SetDualChannelData), (24 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_SetDualChannelData), (88 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_SetDualChannelData), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_GetDataOutputValue), (36 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_GetDataOutputValue), (40 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_GetDataOutputValue), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_DMACmd), (32 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_DMACmd), (72 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_DMACmd), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_ITConfig), (28 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_ITConfig), (70 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_ITConfig), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_GetFlagStatus), (22 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_GetFlagStatus), (58 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_ClearFlag), (16 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_ClearFlag), (26 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_ClearFlag), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_GetITStatus), (36 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_GetITStatus), (86 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_GetITStatus), (8 bytes).
-    Removing stm32f4xx_dac.o(.text.DAC_ClearITPendingBit), (16 bytes).
+    Removing stm32f4xx_dac.o(.text.DAC_ClearITPendingBit), (26 bytes).
     Removing stm32f4xx_dac.o(.ARM.exidx.text.DAC_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_dbgmcu.o(.text), (0 bytes).
     Removing stm32f4xx_dbgmcu.o(.text.DBGMCU_GetREVID), (14 bytes).
     Removing stm32f4xx_dbgmcu.o(.ARM.exidx.text.DBGMCU_GetREVID), (8 bytes).
     Removing stm32f4xx_dbgmcu.o(.text.DBGMCU_GetDEVID), (16 bytes).
     Removing stm32f4xx_dbgmcu.o(.ARM.exidx.text.DBGMCU_GetDEVID), (8 bytes).
-    Removing stm32f4xx_dbgmcu.o(.text.DBGMCU_Config), (24 bytes).
+    Removing stm32f4xx_dbgmcu.o(.text.DBGMCU_Config), (56 bytes).
     Removing stm32f4xx_dbgmcu.o(.ARM.exidx.text.DBGMCU_Config), (8 bytes).
-    Removing stm32f4xx_dbgmcu.o(.text.DBGMCU_APB1PeriphConfig), (24 bytes).
+    Removing stm32f4xx_dbgmcu.o(.text.DBGMCU_APB1PeriphConfig), (56 bytes).
     Removing stm32f4xx_dbgmcu.o(.ARM.exidx.text.DBGMCU_APB1PeriphConfig), (8 bytes).
-    Removing stm32f4xx_dbgmcu.o(.text.DBGMCU_APB2PeriphConfig), (24 bytes).
+    Removing stm32f4xx_dbgmcu.o(.text.DBGMCU_APB2PeriphConfig), (56 bytes).
     Removing stm32f4xx_dbgmcu.o(.ARM.exidx.text.DBGMCU_APB2PeriphConfig), (8 bytes).
     Removing stm32f4xx_dcmi.o(.text), (0 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_DeInit), (26 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_DeInit), (62 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_DeInit), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_Init), (72 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_Init), (80 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_Init), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_StructInit), (12 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_StructInit), (38 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_StructInit), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_CROPConfig), (28 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_CROPConfig), (44 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_CROPConfig), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_CROPCmd), (22 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_CROPCmd), (50 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_CROPCmd), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_SetEmbeddedSynchroCodes), (12 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_SetEmbeddedSynchroCodes), (20 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_SetEmbeddedSynchroCodes), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_JPEGCmd), (22 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_JPEGCmd), (50 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_JPEGCmd), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_Cmd), (24 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_Cmd), (50 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_Cmd), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_CaptureCmd), (22 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_CaptureCmd), (50 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_CaptureCmd), (8 bytes).
     Removing stm32f4xx_dcmi.o(.text.DCMI_ReadData), (10 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_ReadData), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_ITConfig), (34 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_ITConfig), (60 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_ITConfig), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_GetFlagStatus), (38 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_GetFlagStatus), (110 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_ClearFlag), (10 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_ClearFlag), (22 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_ClearFlag), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_GetITStatus), (16 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_GetITStatus), (60 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_GetITStatus), (8 bytes).
-    Removing stm32f4xx_dcmi.o(.text.DCMI_ClearITPendingBit), (10 bytes).
+    Removing stm32f4xx_dcmi.o(.text.DCMI_ClearITPendingBit), (22 bytes).
     Removing stm32f4xx_dcmi.o(.ARM.exidx.text.DCMI_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_dfsdm.o(.text), (0 bytes).
     Removing stm32f4xx_dma.o(.text), (0 bytes).
     Removing stm32f4xx_dma.o(.text.DMA_DeInit), (600 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_DeInit), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_Init), (102 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_Init), (148 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_Init), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_StructInit), (10 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_StructInit), (70 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_StructInit), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_Cmd), (16 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_Cmd), (44 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_Cmd), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_PeriphIncOffsetSizeConfig), (18 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_PeriphIncOffsetSizeConfig), (40 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_PeriphIncOffsetSizeConfig), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_FlowControllerConfig), (16 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_FlowControllerConfig), (40 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_FlowControllerConfig), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_SetCurrDataCounter), (4 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_SetCurrDataCounter), (20 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_SetCurrDataCounter), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_GetCurrDataCounter), (6 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_GetCurrDataCounter), (14 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_GetCurrDataCounter), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_DoubleBufferModeConfig), (20 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_DoubleBufferModeConfig), (48 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_DoubleBufferModeConfig), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_DoubleBufferModeCmd), (18 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_DoubleBufferModeCmd), (44 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_DoubleBufferModeCmd), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_MemoryTargetConfig), (12 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_MemoryTargetConfig), (34 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_MemoryTargetConfig), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_GetCurrentMemoryTarget), (8 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_GetCurrentMemoryTarget), (38 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_GetCurrentMemoryTarget), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_GetCmdStatus), (8 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_GetCmdStatus), (44 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_GetCmdStatus), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_GetFIFOStatus), (8 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_GetFIFOStatus), (24 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_GetFIFOStatus), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_GetFlagStatus), (68 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_GetFlagStatus), (130 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_ClearFlag), (60 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_ClearFlag), (98 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_ClearFlag), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_ITConfig), (48 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_ITConfig), (114 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_ITConfig), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_GetITStatus), (102 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_GetITStatus), (188 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_GetITStatus), (8 bytes).
-    Removing stm32f4xx_dma.o(.text.DMA_ClearITPendingBit), (60 bytes).
+    Removing stm32f4xx_dma.o(.text.DMA_ClearITPendingBit), (98 bytes).
     Removing stm32f4xx_dma.o(.ARM.exidx.text.DMA_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_dma2d.o(.text), (0 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_DeInit), (24 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_DeInit), (28 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_DeInit), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_Init), (232 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_Init), (348 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_Init), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_StructInit), (10 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_StructInit), (50 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_StructInit), (8 bytes).
     Removing stm32f4xx_dma2d.o(.text.DMA2D_StartTransfer), (18 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_StartTransfer), (8 bytes).
     Removing stm32f4xx_dma2d.o(.text.DMA2D_AbortTransfer), (18 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_AbortTransfer), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_Suspend), (24 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_Suspend), (54 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_Suspend), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_FGConfig), (110 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_FGConfig), (206 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_FGConfig), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_FG_StructInit), (10 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_FG_StructInit), (54 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_FG_StructInit), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_BGConfig), (110 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_BGConfig), (206 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_BGConfig), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_BG_StructInit), (10 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_BG_StructInit), (54 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_BG_StructInit), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_FGStart), (24 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_FGStart), (54 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_FGStart), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_BGStart), (24 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_BGStart), (54 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_BGStart), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_DeadTimeConfig), (44 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_DeadTimeConfig), (76 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_DeadTimeConfig), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_LineWatermarkConfig), (12 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_LineWatermarkConfig), (20 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_LineWatermarkConfig), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_ITConfig), (24 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_ITConfig), (56 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_ITConfig), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_GetFlagStatus), (18 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_GetFlagStatus), (52 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_ClearFlag), (12 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_ClearFlag), (20 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_ClearFlag), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_GetITStatus), (32 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_GetITStatus), (100 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_GetITStatus), (8 bytes).
-    Removing stm32f4xx_dma2d.o(.text.DMA2D_ClearITPendingBit), (14 bytes).
+    Removing stm32f4xx_dma2d.o(.text.DMA2D_ClearITPendingBit), (26 bytes).
     Removing stm32f4xx_dma2d.o(.ARM.exidx.text.DMA2D_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_dsi.o(.text), (0 bytes).
     Removing stm32f4xx_exti.o(.text), (0 bytes).
-    Removing stm32f4xx_exti.o(.text.EXTI_DeInit), (30 bytes).
+    Removing stm32f4xx_exti.o(.text.EXTI_DeInit), (62 bytes).
     Removing stm32f4xx_exti.o(.ARM.exidx.text.EXTI_DeInit), (8 bytes).
-    Removing stm32f4xx_exti.o(.text.EXTI_Init), (104 bytes).
+    Removing stm32f4xx_exti.o(.text.EXTI_Init), (234 bytes).
     Removing stm32f4xx_exti.o(.ARM.exidx.text.EXTI_Init), (8 bytes).
-    Removing stm32f4xx_exti.o(.text.EXTI_StructInit), (14 bytes).
+    Removing stm32f4xx_exti.o(.text.EXTI_StructInit), (28 bytes).
     Removing stm32f4xx_exti.o(.ARM.exidx.text.EXTI_StructInit), (8 bytes).
-    Removing stm32f4xx_exti.o(.text.EXTI_GenerateSWInterrupt), (16 bytes).
+    Removing stm32f4xx_exti.o(.text.EXTI_GenerateSWInterrupt), (24 bytes).
     Removing stm32f4xx_exti.o(.ARM.exidx.text.EXTI_GenerateSWInterrupt), (8 bytes).
-    Removing stm32f4xx_exti.o(.text.EXTI_GetFlagStatus), (18 bytes).
+    Removing stm32f4xx_exti.o(.text.EXTI_GetFlagStatus), (52 bytes).
     Removing stm32f4xx_exti.o(.ARM.exidx.text.EXTI_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_exti.o(.text.EXTI_ClearFlag), (12 bytes).
+    Removing stm32f4xx_exti.o(.text.EXTI_ClearFlag), (20 bytes).
     Removing stm32f4xx_exti.o(.ARM.exidx.text.EXTI_ClearFlag), (8 bytes).
-    Removing stm32f4xx_exti.o(.text.EXTI_GetITStatus), (18 bytes).
+    Removing stm32f4xx_exti.o(.text.EXTI_GetITStatus), (52 bytes).
     Removing stm32f4xx_exti.o(.ARM.exidx.text.EXTI_GetITStatus), (8 bytes).
-    Removing stm32f4xx_exti.o(.text.EXTI_ClearITPendingBit), (12 bytes).
+    Removing stm32f4xx_exti.o(.text.EXTI_ClearITPendingBit), (20 bytes).
     Removing stm32f4xx_exti.o(.ARM.exidx.text.EXTI_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_flash.o(.text), (0 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_SetLatency), (12 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_SetLatency), (20 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_SetLatency), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_PrefetchBufferCmd), (26 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_PrefetchBufferCmd), (54 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_PrefetchBufferCmd), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_InstructionCacheCmd), (26 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_InstructionCacheCmd), (54 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_InstructionCacheCmd), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_DataCacheCmd), (26 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_DataCacheCmd), (54 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_DataCacheCmd), (8 bytes).
     Removing stm32f4xx_flash.o(.text.FLASH_InstructionCacheReset), (18 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_InstructionCacheReset), (8 bytes).
     Removing stm32f4xx_flash.o(.text.FLASH_DataCacheReset), (18 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_DataCacheReset), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_Unlock), (40 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_Unlock), (48 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_Unlock), (8 bytes).
     Removing stm32f4xx_flash.o(.text.FLASH_Lock), (18 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_Lock), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_EraseSector), (96 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_EraseSector), (190 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_EraseSector), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_WaitForLastOperation), (52 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_WaitForLastOperation), (48 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_WaitForLastOperation), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_EraseAllSectors), (76 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_EraseAllSectors), (168 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_EraseAllSectors), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_EraseAllBank1Sectors), (76 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_EraseAllBank1Sectors), (168 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_EraseAllBank1Sectors), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_EraseAllBank2Sectors), (76 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_EraseAllBank2Sectors), (168 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_EraseAllBank2Sectors), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_ProgramDoubleWord), (70 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_ProgramDoubleWord), (106 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_ProgramDoubleWord), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_ProgramWord), (64 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_ProgramWord), (100 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_ProgramWord), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_ProgramHalfWord), (64 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_ProgramHalfWord), (104 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_ProgramHalfWord), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_ProgramByte), (60 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_ProgramByte), (100 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_ProgramByte), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_Unlock), (38 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_Unlock), (48 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_Unlock), (8 bytes).
     Removing stm32f4xx_flash.o(.text.FLASH_OB_Lock), (18 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_Lock), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_WRPConfig), (42 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_WRPConfig), (84 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_WRPConfig), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_WRP1Config), (42 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_WRP1Config), (84 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_WRP1Config), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_PCROPSelectionConfig), (20 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_PCROPSelectionConfig), (46 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_PCROPSelectionConfig), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_PCROPConfig), (42 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_PCROPConfig), (84 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_PCROPConfig), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_PCROP1Config), (42 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_PCROP1Config), (84 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_PCROP1Config), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_RDPConfig), (24 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_RDPConfig), (52 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_RDPConfig), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_UserConfig), (44 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_UserConfig), (96 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_UserConfig), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_BootConfig), (24 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_BootConfig), (36 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_BootConfig), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_BORConfig), (24 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_BORConfig), (36 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_BORConfig), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_Launch), (24 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_Launch), (42 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_Launch), (8 bytes).
     Removing stm32f4xx_flash.o(.text.FLASH_OB_GetUser), (16 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_GetUser), (8 bytes).
@@ -1470,945 +1470,945 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_GetPCROP), (8 bytes).
     Removing stm32f4xx_flash.o(.text.FLASH_OB_GetPCROP1), (12 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_GetPCROP1), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_OB_GetRDP), (18 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_OB_GetRDP), (48 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_GetRDP), (8 bytes).
     Removing stm32f4xx_flash.o(.text.FLASH_OB_GetBOR), (16 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_OB_GetBOR), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_ITConfig), (24 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_ITConfig), (56 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_ITConfig), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_GetFlagStatus), (18 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_GetFlagStatus), (52 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_ClearFlag), (12 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_ClearFlag), (20 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_ClearFlag), (8 bytes).
-    Removing stm32f4xx_flash.o(.text.FLASH_GetStatus), (64 bytes).
+    Removing stm32f4xx_flash.o(.text.FLASH_GetStatus), (162 bytes).
     Removing stm32f4xx_flash.o(.ARM.exidx.text.FLASH_GetStatus), (8 bytes).
     Removing stm32f4xx_flash_ramfunc.o(.text), (0 bytes).
-    Removing stm32f4xx_flash_ramfunc.o(.RamFunc), (54 bytes).
+    Removing stm32f4xx_flash_ramfunc.o(.RamFunc), (110 bytes).
     Removing stm32f4xx_flash_ramfunc.o(.ARM.exidx.RamFunc), (16 bytes).
     Removing stm32f4xx_fmpi2c.o(.text), (0 bytes).
     Removing stm32f4xx_gpio.o(.text), (0 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_DeInit), (92 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_DeInit), (430 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_DeInit), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_Init), (134 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_Init), (246 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_Init), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_StructInit), (12 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_StructInit), (34 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_StructInit), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_PinLockConfig), (36 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_PinLockConfig), (60 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_PinLockConfig), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit), (10 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit), (52 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadInputDataBit), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_ReadInputData), (6 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_ReadInputData), (14 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadInputData), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_ReadOutputDataBit), (10 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_ReadOutputDataBit), (52 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadOutputDataBit), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_ReadOutputData), (6 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_ReadOutputData), (14 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ReadOutputData), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_SetBits), (4 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_SetBits), (20 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_SetBits), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_ResetBits), (6 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_ResetBits), (22 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ResetBits), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_WriteBit), (10 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_WriteBit), (46 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_WriteBit), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_Write), (4 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_Write), (20 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_Write), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_ToggleBits), (8 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_ToggleBits), (24 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_ToggleBits), (8 bytes).
-    Removing stm32f4xx_gpio.o(.text.GPIO_PinAFConfig), (40 bytes).
+    Removing stm32f4xx_gpio.o(.text.GPIO_PinAFConfig), (114 bytes).
     Removing stm32f4xx_gpio.o(.ARM.exidx.text.GPIO_PinAFConfig), (8 bytes).
     Removing stm32f4xx_hash.o(.text), (0 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_DeInit), (20 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_DeInit), (26 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_DeInit), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_Init), (78 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_Init), (102 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_Init), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_StructInit), (12 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_StructInit), (26 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_StructInit), (8 bytes).
     Removing stm32f4xx_hash.o(.text.HASH_Reset), (18 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_Reset), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_SetLastWordValidBitsNbr), (24 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_SetLastWordValidBitsNbr), (36 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_SetLastWordValidBitsNbr), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_DataIn), (12 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_DataIn), (20 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_DataIn), (8 bytes).
     Removing stm32f4xx_hash.o(.text.HASH_GetInFIFOWordsNbr), (16 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_GetInFIFOWordsNbr), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_GetDigest), (48 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_GetDigest), (120 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_GetDigest), (8 bytes).
     Removing stm32f4xx_hash.o(.text.HASH_StartDigest), (18 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_StartDigest), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_SaveContext), (46 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_SaveContext), (114 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_SaveContext), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_RestoreContext), (64 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_RestoreContext), (118 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_RestoreContext), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_AutoStartDigest), (26 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_AutoStartDigest), (54 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_AutoStartDigest), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_DMACmd), (24 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_DMACmd), (54 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_DMACmd), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_ITConfig), (24 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_ITConfig), (56 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_ITConfig), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_GetFlagStatus), (24 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_GetFlagStatus), (86 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_ClearFlag), (14 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_ClearFlag), (22 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_ClearFlag), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_GetITStatus), (22 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_GetITStatus), (70 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_GetITStatus), (8 bytes).
-    Removing stm32f4xx_hash.o(.text.HASH_ClearITPendingBit), (14 bytes).
+    Removing stm32f4xx_hash.o(.text.HASH_ClearITPendingBit), (22 bytes).
     Removing stm32f4xx_hash.o(.ARM.exidx.text.HASH_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_hash_md5.o(.text), (0 bytes).
-    Removing stm32f4xx_hash_md5.o(.text.HASH_MD5), (146 bytes).
+    Removing stm32f4xx_hash_md5.o(.text.HASH_MD5), (258 bytes).
     Removing stm32f4xx_hash_md5.o(.ARM.exidx.text.HASH_MD5), (8 bytes).
-    Removing stm32f4xx_hash_md5.o(.text.HMAC_MD5), (322 bytes).
+    Removing stm32f4xx_hash_md5.o(.text.HMAC_MD5), (560 bytes).
     Removing stm32f4xx_hash_md5.o(.ARM.exidx.text.HMAC_MD5), (8 bytes).
     Removing stm32f4xx_hash_sha1.o(.text), (0 bytes).
-    Removing stm32f4xx_hash_sha1.o(.text.HASH_SHA1), (152 bytes).
+    Removing stm32f4xx_hash_sha1.o(.text.HASH_SHA1), (270 bytes).
     Removing stm32f4xx_hash_sha1.o(.ARM.exidx.text.HASH_SHA1), (8 bytes).
-    Removing stm32f4xx_hash_sha1.o(.text.HMAC_SHA1), (334 bytes).
+    Removing stm32f4xx_hash_sha1.o(.text.HMAC_SHA1), (576 bytes).
     Removing stm32f4xx_hash_sha1.o(.ARM.exidx.text.HMAC_SHA1), (8 bytes).
     Removing stm32f4xx_i2c.o(.text), (0 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_DeInit), (74 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_DeInit), (128 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_DeInit), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_Init), (204 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_Init), (426 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_Init), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_StructInit), (24 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_StructInit), (46 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_StructInit), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_Cmd), (18 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_Cmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_Cmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_AnalogFilterCmd), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_AnalogFilterCmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_AnalogFilterCmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_DigitalFilterConfig), (10 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_DigitalFilterConfig), (64 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_DigitalFilterConfig), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_GenerateSTART), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_GenerateSTART), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_GenerateSTART), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_GenerateSTOP), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_GenerateSTOP), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_GenerateSTOP), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_Send7bitAddress), (16 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_Send7bitAddress), (60 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_Send7bitAddress), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_AcknowledgeConfig), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_AcknowledgeConfig), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_AcknowledgeConfig), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_OwnAddress2Config), (12 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_OwnAddress2Config), (64 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_OwnAddress2Config), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_DualAddressCmd), (18 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_DualAddressCmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_DualAddressCmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_GeneralCallCmd), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_GeneralCallCmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_GeneralCallCmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_SoftwareResetCmd), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_SoftwareResetCmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_SoftwareResetCmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_StretchClockCmd), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_StretchClockCmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_StretchClockCmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_FastModeDutyCycleConfig), (24 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_FastModeDutyCycleConfig), (48 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_FastModeDutyCycleConfig), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_NACKPositionConfig), (24 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_NACKPositionConfig), (48 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_NACKPositionConfig), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_SMBusAlertConfig), (24 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_SMBusAlertConfig), (48 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_SMBusAlertConfig), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_ARPCmd), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_ARPCmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_ARPCmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_SendData), (4 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_SendData), (20 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_SendData), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_ReceiveData), (6 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_ReceiveData), (14 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_ReceiveData), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_TransmitPEC), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_TransmitPEC), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_TransmitPEC), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_PECPositionConfig), (24 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_PECPositionConfig), (48 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_PECPositionConfig), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_CalculatePEC), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_CalculatePEC), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_CalculatePEC), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_GetPEC), (6 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_GetPEC), (14 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_GetPEC), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_DMACmd), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_DMACmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_DMACmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_DMALastTransferCmd), (20 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_DMALastTransferCmd), (44 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_DMALastTransferCmd), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_ReadRegister), (22 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_ReadRegister), (34 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_ReadRegister), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_ITConfig), (16 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_ITConfig), (52 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_ITConfig), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_CheckEvent), (34 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_CheckEvent), (128 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_CheckEvent), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_GetLastEvent), (12 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_GetLastEvent), (48 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_GetLastEvent), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_GetFlagStatus), (48 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_GetFlagStatus), (98 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_ClearFlag), (6 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_ClearFlag), (30 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_ClearFlag), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_GetITStatus), (28 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_GetITStatus), (80 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_GetITStatus), (8 bytes).
-    Removing stm32f4xx_i2c.o(.text.I2C_ClearITPendingBit), (6 bytes).
+    Removing stm32f4xx_i2c.o(.text.I2C_ClearITPendingBit), (30 bytes).
     Removing stm32f4xx_i2c.o(.ARM.exidx.text.I2C_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_iwdg.o(.text), (0 bytes).
-    Removing stm32f4xx_iwdg.o(.text.IWDG_WriteAccessCmd), (12 bytes).
+    Removing stm32f4xx_iwdg.o(.text.IWDG_WriteAccessCmd), (24 bytes).
     Removing stm32f4xx_iwdg.o(.ARM.exidx.text.IWDG_WriteAccessCmd), (8 bytes).
-    Removing stm32f4xx_iwdg.o(.text.IWDG_SetPrescaler), (12 bytes).
+    Removing stm32f4xx_iwdg.o(.text.IWDG_SetPrescaler), (24 bytes).
     Removing stm32f4xx_iwdg.o(.ARM.exidx.text.IWDG_SetPrescaler), (8 bytes).
-    Removing stm32f4xx_iwdg.o(.text.IWDG_SetReload), (12 bytes).
+    Removing stm32f4xx_iwdg.o(.text.IWDG_SetReload), (24 bytes).
     Removing stm32f4xx_iwdg.o(.ARM.exidx.text.IWDG_SetReload), (8 bytes).
     Removing stm32f4xx_iwdg.o(.text.IWDG_ReloadCounter), (16 bytes).
     Removing stm32f4xx_iwdg.o(.ARM.exidx.text.IWDG_ReloadCounter), (8 bytes).
     Removing stm32f4xx_iwdg.o(.text.IWDG_Enable), (16 bytes).
     Removing stm32f4xx_iwdg.o(.ARM.exidx.text.IWDG_Enable), (8 bytes).
-    Removing stm32f4xx_iwdg.o(.text.IWDG_GetFlagStatus), (18 bytes).
+    Removing stm32f4xx_iwdg.o(.text.IWDG_GetFlagStatus), (56 bytes).
     Removing stm32f4xx_iwdg.o(.ARM.exidx.text.IWDG_GetFlagStatus), (8 bytes).
     Removing stm32f4xx_lptim.o(.text), (0 bytes).
     Removing stm32f4xx_ltdc.o(.text), (0 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_DeInit), (24 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_DeInit), (28 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_DeInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_Init), (170 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_Init), (272 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_Init), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_StructInit), (10 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_StructInit), (70 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_StructInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_Cmd), (24 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_Cmd), (54 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_Cmd), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_DitherCmd), (26 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_DitherCmd), (54 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_DitherCmd), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_GetRGBWidth), (48 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_GetRGBWidth), (50 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_GetRGBWidth), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_RGBStructInit), (10 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_RGBStructInit), (22 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_RGBStructInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LIPConfig), (12 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LIPConfig), (20 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LIPConfig), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_ReloadConfig), (12 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_ReloadConfig), (20 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_ReloadConfig), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerInit), (148 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerInit), (258 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LayerInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerStructInit), (44 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerStructInit), (82 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LayerStructInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerCmd), (16 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerCmd), (44 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LayerCmd), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_GetPosStatus), (28 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_GetPosStatus), (30 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_GetPosStatus), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_PosStructInit), (8 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_PosStructInit), (18 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_PosStructInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_GetCDStatus), (18 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_GetCDStatus), (46 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_GetCDStatus), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_ColorKeyingConfig), (62 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_ColorKeyingConfig), (112 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_ColorKeyingConfig), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_ColorKeyingStructInit), (10 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_ColorKeyingStructInit), (22 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_ColorKeyingStructInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_CLUTCmd), (28 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_CLUTCmd), (56 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_CLUTCmd), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_CLUTInit), (24 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_CLUTInit), (62 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_CLUTInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_CLUTStructInit), (12 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_CLUTStructInit), (26 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_CLUTStructInit), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerPosition), (140 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerPosition), (228 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LayerPosition), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerAlpha), (4 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerAlpha), (20 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LayerAlpha), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerAddress), (4 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerAddress), (16 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LayerAddress), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerSize), (112 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerSize), (196 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LayerSize), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerPixelFormat), (84 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_LayerPixelFormat), (224 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_LayerPixelFormat), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_ITConfig), (24 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_ITConfig), (56 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_ITConfig), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_GetFlagStatus), (18 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_GetFlagStatus), (52 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_ClearFlag), (12 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_ClearFlag), (20 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_ClearFlag), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_GetITStatus), (28 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_GetITStatus), (94 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_GetITStatus), (8 bytes).
-    Removing stm32f4xx_ltdc.o(.text.LTDC_ClearITPendingBit), (12 bytes).
+    Removing stm32f4xx_ltdc.o(.text.LTDC_ClearITPendingBit), (20 bytes).
     Removing stm32f4xx_ltdc.o(.ARM.exidx.text.LTDC_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_pwr.o(.text), (0 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_DeInit), (24 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_DeInit), (28 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_DeInit), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_BackupAccessCmd), (10 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_BackupAccessCmd), (22 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_BackupAccessCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_PVDLevelConfig), (20 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_PVDLevelConfig), (44 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_PVDLevelConfig), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_PVDCmd), (10 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_PVDCmd), (22 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_PVDCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_WakeUpPinCmd), (10 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_WakeUpPinCmd), (22 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_WakeUpPinCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_BackupRegulatorCmd), (10 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_BackupRegulatorCmd), (22 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_BackupRegulatorCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_MainRegulatorModeConfig), (20 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_MainRegulatorModeConfig), (44 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_MainRegulatorModeConfig), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_OverDriveCmd), (10 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_OverDriveCmd), (22 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_OverDriveCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_OverDriveSWCmd), (10 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_OverDriveSWCmd), (22 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_OverDriveSWCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_UnderDriveCmd), (26 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_UnderDriveCmd), (54 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_UnderDriveCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_MainRegulatorLowVoltageCmd), (16 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_MainRegulatorLowVoltageCmd), (42 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_MainRegulatorLowVoltageCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_LowRegulatorLowVoltageCmd), (16 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_LowRegulatorLowVoltageCmd), (42 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_LowRegulatorLowVoltageCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_FlashPowerDownCmd), (10 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_FlashPowerDownCmd), (22 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_FlashPowerDownCmd), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_EnterSTOPMode), (70 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_EnterSTOPMode), (100 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_EnterSTOPMode), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_EnterUnderDriveSTOPMode), (70 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_EnterUnderDriveSTOPMode), (100 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_EnterUnderDriveSTOPMode), (8 bytes).
     Removing stm32f4xx_pwr.o(.text.PWR_EnterSTANDBYMode), (36 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_EnterSTANDBYMode), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_GetFlagStatus), (18 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_GetFlagStatus), (52 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_pwr.o(.text.PWR_ClearFlag), (18 bytes).
+    Removing stm32f4xx_pwr.o(.text.PWR_ClearFlag), (26 bytes).
     Removing stm32f4xx_pwr.o(.ARM.exidx.text.PWR_ClearFlag), (8 bytes).
     Removing stm32f4xx_qspi.o(.text), (0 bytes).
     Removing stm32f4xx_rcc.o(.text), (0 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_DeInit), (72 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_DeInit), (108 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_DeInit), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_HSEConfig), (16 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_HSEConfig), (28 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_HSEConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_WaitForHSEStartUp), (48 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_WaitForHSEStartUp), (108 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_WaitForHSEStartUp), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_GetFlagStatus), (42 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_GetFlagStatus), (130 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_AdjustHSICalibrationValue), (22 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_AdjustHSICalibrationValue), (50 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AdjustHSICalibrationValue), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_HSICmd), (10 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_HSICmd), (22 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_HSICmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_LSEConfig), (30 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_LSEConfig), (76 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_LSEConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_LSICmd), (12 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_LSICmd), (24 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_LSICmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_PLLConfig), (46 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_PLLConfig), (62 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_PLLCmd), (10 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_PLLCmd), (22 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_PLLI2SConfig), (20 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_PLLI2SConfig), (36 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLI2SConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_PLLI2SCmd), (10 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_PLLI2SCmd), (22 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLI2SCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_PLLSAIConfig), (22 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_PLLSAIConfig), (38 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLSAIConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_PLLSAICmd), (10 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_PLLSAICmd), (22 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PLLSAICmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_ClockSecuritySystemCmd), (10 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_ClockSecuritySystemCmd), (22 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_ClockSecuritySystemCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_MCO1Config), (22 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_MCO1Config), (50 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_MCO1Config), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_MCO2Config), (22 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_MCO2Config), (50 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_MCO2Config), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_SYSCLKConfig), (20 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_SYSCLKConfig), (44 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_SYSCLKConfig), (8 bytes).
     Removing stm32f4xx_rcc.o(.text.RCC_GetSYSCLKSource), (16 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_GetSYSCLKSource), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_HCLKConfig), (20 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_HCLKConfig), (44 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_HCLKConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_PCLK1Config), (20 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_PCLK1Config), (44 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PCLK1Config), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_PCLK2Config), (22 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_PCLK2Config), (46 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_PCLK2Config), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_GetClocksFreq), (150 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_GetClocksFreq), (354 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_GetClocksFreq), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_RTCCLKConfig), (50 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_RTCCLKConfig), (90 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_RTCCLKConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_RTCCLKCmd), (12 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_RTCCLKCmd), (24 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_RTCCLKCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_BackupResetCmd), (12 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_BackupResetCmd), (24 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_BackupResetCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_I2SCLKConfig), (12 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_I2SCLKConfig), (20 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_I2SCLKConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_SAIPLLI2SClkDivConfig), (22 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_SAIPLLI2SClkDivConfig), (46 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_SAIPLLI2SClkDivConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_SAIPLLSAIClkDivConfig), (28 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_SAIPLLSAIClkDivConfig), (52 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_SAIPLLSAIClkDivConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_LTDCCLKDivConfig), (20 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_LTDCCLKDivConfig), (44 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_LTDCCLKDivConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_TIMCLKPresConfig), (12 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_TIMCLKPresConfig), (20 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_TIMCLKPresConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB1PeriphClockCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB2PeriphClockCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB1PeriphClockCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB2PeriphClockCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_AHB1PeriphResetCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_AHB1PeriphResetCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB1PeriphResetCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_AHB2PeriphResetCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_AHB2PeriphResetCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB2PeriphResetCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_APB1PeriphResetCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB1PeriphResetCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_APB2PeriphResetCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB2PeriphResetCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockLPModeCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_AHB1PeriphClockLPModeCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB1PeriphClockLPModeCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockLPModeCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_AHB2PeriphClockLPModeCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_AHB2PeriphClockLPModeCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockLPModeCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_APB1PeriphClockLPModeCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB1PeriphClockLPModeCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockLPModeCmd), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_APB2PeriphClockLPModeCmd), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_APB2PeriphClockLPModeCmd), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_LSEModeConfig), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_LSEModeConfig), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_LSEModeConfig), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_ITConfig), (24 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_ITConfig), (62 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_ITConfig), (8 bytes).
     Removing stm32f4xx_rcc.o(.text.RCC_ClearFlag), (18 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_ClearFlag), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_GetITStatus), (18 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_GetITStatus), (56 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_GetITStatus), (8 bytes).
-    Removing stm32f4xx_rcc.o(.text.RCC_ClearITPendingBit), (12 bytes).
+    Removing stm32f4xx_rcc.o(.text.RCC_ClearITPendingBit), (24 bytes).
     Removing stm32f4xx_rcc.o(.ARM.exidx.text.RCC_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_rcc.o(.rodata.APBAHBPrescTable), (16 bytes).
     Removing stm32f4xx_rng.o(.text), (0 bytes).
     Removing stm32f4xx_rtc.o(.text), (0 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_DeInit), (140 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_DeInit), (360 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_DeInit), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_EnterInitMode), (64 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_EnterInitMode), (158 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_EnterInitMode), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_WaitForSynchro), (68 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_WaitForSynchro), (160 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_WaitForSynchro), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_Init), (70 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_Init), (128 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_Init), (8 bytes).
     Removing stm32f4xx_rtc.o(.text.RTC_ExitInitMode), (18 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_ExitInitMode), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_StructInit), (10 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_StructInit), (26 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_StructInit), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_WriteProtectionCmd), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_WriteProtectionCmd), (50 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_WriteProtectionCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_RefClockCmd), (60 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_RefClockCmd), (122 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_RefClockCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_BypassShadowCmd), (44 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_BypassShadowCmd), (82 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_BypassShadowCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_SetTime), (154 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_SetTime), (312 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_SetTime), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_Bcd2ToByte), (18 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_Bcd2ToByte), (48 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_Bcd2ToByte), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_ByteToBcd2), (46 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_ByteToBcd2), (66 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_ByteToBcd2), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TimeStructInit), (6 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TimeStructInit), (26 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TimeStructInit), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_GetTime), (72 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_GetTime), (124 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetTime), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_GetSubSecond), (14 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_GetSubSecond), (34 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetSubSecond), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_SetDate), (146 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_SetDate), (298 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_SetDate), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_DateStructInit), (12 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_DateStructInit), (28 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_DateStructInit), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_GetDate), (70 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_GetDate), (120 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetDate), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_SetAlarm), (152 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_SetAlarm), (334 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_SetAlarm), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_AlarmStructInit), (14 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_AlarmStructInit), (40 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_AlarmStructInit), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_GetAlarm), (118 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_GetAlarm), (184 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetAlarm), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_AlarmCmd), (82 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_AlarmCmd), (204 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_AlarmCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_AlarmSubSecondConfig), (46 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_AlarmSubSecondConfig), (90 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_AlarmSubSecondConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_GetAlarmSubSecond), (32 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_GetAlarmSubSecond), (60 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetAlarmSubSecond), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_WakeUpClockConfig), (36 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_WakeUpClockConfig), (52 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_WakeUpClockConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_SetWakeUpCounter), (26 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_SetWakeUpCounter), (40 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_SetWakeUpCounter), (8 bytes).
     Removing stm32f4xx_rtc.o(.text.RTC_GetWakeUpCounter), (14 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetWakeUpCounter), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_WakeUpCmd), (80 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_WakeUpCmd), (198 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_WakeUpCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_DayLightSavingConfig), (38 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_DayLightSavingConfig), (58 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_DayLightSavingConfig), (8 bytes).
     Removing stm32f4xx_rtc.o(.text.RTC_GetStoreOperation), (16 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetStoreOperation), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_OutputConfig), (38 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_OutputConfig), (58 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_OutputConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_CoarseCalibConfig), (52 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_CoarseCalibConfig), (94 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_CoarseCalibConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_CoarseCalibCmd), (60 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_CoarseCalibCmd), (122 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_CoarseCalibCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_CalibOutputCmd), (44 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_CalibOutputCmd), (82 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_CalibOutputCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_CalibOutputConfig), (36 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_CalibOutputConfig), (52 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_CalibOutputConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_SmoothCalibConfig), (86 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_SmoothCalibConfig), (180 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_SmoothCalibConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TimeStampCmd), (48 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TimeStampCmd), (98 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TimeStampCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_GetTimeStamp), (132 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_GetTimeStamp), (220 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetTimeStamp), (8 bytes).
     Removing stm32f4xx_rtc.o(.text.RTC_GetTimeStampSubSecond), (12 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetTimeStampSubSecond), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TamperTriggerConfig), (26 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TamperTriggerConfig), (56 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TamperTriggerConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TamperCmd), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TamperCmd), (56 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TamperCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TamperFilterConfig), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TamperFilterConfig), (32 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TamperFilterConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TamperSamplingFreqConfig), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TamperSamplingFreqConfig), (32 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TamperSamplingFreqConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TamperPinsPrechargeDuration), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TamperPinsPrechargeDuration), (32 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TamperPinsPrechargeDuration), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TimeStampOnTamperDetectionCmd), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TimeStampOnTamperDetectionCmd), (54 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TimeStampOnTamperDetectionCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TamperPullUpCmd), (26 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TamperPullUpCmd), (54 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TamperPullUpCmd), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_WriteBackupRegister), (32 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_WriteBackupRegister), (40 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_WriteBackupRegister), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_ReadBackupRegister), (32 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_ReadBackupRegister), (36 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_ReadBackupRegister), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TamperPinSelection), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TamperPinSelection), (32 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TamperPinSelection), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_TimeStampPinSelection), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_TimeStampPinSelection), (32 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_TimeStampPinSelection), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_OutputTypeConfig), (24 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_OutputTypeConfig), (32 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_OutputTypeConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_SynchroShiftConfig), (86 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_SynchroShiftConfig), (222 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_SynchroShiftConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_ITConfig), (68 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_ITConfig), (138 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_ITConfig), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_GetFlagStatus), (28 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_GetFlagStatus), (68 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_ClearFlag), (32 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_ClearFlag), (34 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_ClearFlag), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_GetITStatus), (58 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_GetITStatus), (116 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_GetITStatus), (8 bytes).
-    Removing stm32f4xx_rtc.o(.text.RTC_ClearITPendingBit), (34 bytes).
+    Removing stm32f4xx_rtc.o(.text.RTC_ClearITPendingBit), (44 bytes).
     Removing stm32f4xx_rtc.o(.ARM.exidx.text.RTC_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_sai.o(.text), (0 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_DeInit), (42 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_DeInit), (50 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_DeInit), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_Init), (86 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_Init), (122 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_Init), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_FrameInit), (54 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_FrameInit), (90 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_FrameInit), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_SlotInit), (44 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_SlotInit), (66 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_SlotInit), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_StructInit), (28 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_StructInit), (56 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_StructInit), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_FrameStructInit), (16 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_FrameStructInit), (34 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_FrameStructInit), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_SlotStructInit), (14 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_SlotStructInit), (28 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_SlotStructInit), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_Cmd), (18 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_Cmd), (44 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_Cmd), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_MonoModeConfig), (18 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_MonoModeConfig), (30 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_MonoModeConfig), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_TRIStateConfig), (18 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_TRIStateConfig), (30 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_TRIStateConfig), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_CompandingModeConfig), (16 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_CompandingModeConfig), (30 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_CompandingModeConfig), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_MuteModeCmd), (16 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_MuteModeCmd), (44 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_MuteModeCmd), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_MuteValueConfig), (16 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_MuteValueConfig), (30 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_MuteValueConfig), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_MuteFrameCounterConfig), (18 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_MuteFrameCounterConfig), (32 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_MuteFrameCounterConfig), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_FlushFIFO), (10 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_FlushFIFO), (18 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_FlushFIFO), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_ReceiveData), (4 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_ReceiveData), (12 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_ReceiveData), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_SendData), (4 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_SendData), (16 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_SendData), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_DMACmd), (18 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_DMACmd), (44 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_DMACmd), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_ITConfig), (16 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_ITConfig), (46 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_ITConfig), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_GetFlagStatus), (10 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_GetFlagStatus), (48 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_ClearFlag), (8 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_ClearFlag), (20 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_ClearFlag), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_GetITStatus), (22 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_GetITStatus), (66 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_GetITStatus), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_ClearITPendingBit), (8 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_ClearITPendingBit), (20 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_ClearITPendingBit), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_GetCmdStatus), (8 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_GetCmdStatus), (46 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_GetCmdStatus), (8 bytes).
-    Removing stm32f4xx_sai.o(.text.SAI_GetFIFOStatus), (8 bytes).
+    Removing stm32f4xx_sai.o(.text.SAI_GetFIFOStatus), (24 bytes).
     Removing stm32f4xx_sai.o(.ARM.exidx.text.SAI_GetFIFOStatus), (8 bytes).
     Removing stm32f4xx_sdio.o(.text), (0 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_DeInit), (24 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_DeInit), (28 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_DeInit), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_Init), (52 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_Init), (78 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_Init), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_StructInit), (16 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_StructInit), (34 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_StructInit), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_ClockCmd), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_ClockCmd), (24 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_ClockCmd), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_SetPowerState), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_SetPowerState), (20 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_SetPowerState), (8 bytes).
     Removing stm32f4xx_sdio.o(.text.SDIO_GetPowerState), (16 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_GetPowerState), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_SendCommand), (46 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_SendCommand), (78 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_SendCommand), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_CmdStructInit), (14 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_CmdStructInit), (30 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_CmdStructInit), (8 bytes).
     Removing stm32f4xx_sdio.o(.text.SDIO_GetCommandResponse), (14 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_GetCommandResponse), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_GetResponse), (26 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_GetResponse), (30 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_GetResponse), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_DataConfig), (52 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_DataConfig), (90 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_DataConfig), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_DataStructInit), (20 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_DataStructInit), (38 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_DataStructInit), (8 bytes).
     Removing stm32f4xx_sdio.o(.text.SDIO_GetDataCounter), (12 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_GetDataCounter), (8 bytes).
     Removing stm32f4xx_sdio.o(.text.SDIO_ReadData), (12 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_ReadData), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_WriteData), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_WriteData), (20 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_WriteData), (8 bytes).
     Removing stm32f4xx_sdio.o(.text.SDIO_GetFIFOCount), (12 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_GetFIFOCount), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_StartSDIOReadWait), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_StartSDIOReadWait), (24 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_StartSDIOReadWait), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_StopSDIOReadWait), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_StopSDIOReadWait), (24 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_StopSDIOReadWait), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_SetSDIOReadWaitMode), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_SetSDIOReadWaitMode), (20 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_SetSDIOReadWaitMode), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_SetSDIOOperation), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_SetSDIOOperation), (24 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_SetSDIOOperation), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_SendSDIOSuspendCmd), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_SendSDIOSuspendCmd), (24 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_SendSDIOSuspendCmd), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_CommandCompletionCmd), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_CommandCompletionCmd), (24 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_CommandCompletionCmd), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_CEATAITCmd), (18 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_CEATAITCmd), (28 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_CEATAITCmd), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_SendCEATACmd), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_SendCEATACmd), (24 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_SendCEATACmd), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_DMACmd), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_DMACmd), (24 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_DMACmd), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_ITConfig), (24 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_ITConfig), (56 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_ITConfig), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_GetFlagStatus), (18 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_GetFlagStatus), (52 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_ClearFlag), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_ClearFlag), (20 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_ClearFlag), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_GetITStatus), (18 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_GetITStatus), (52 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_GetITStatus), (8 bytes).
-    Removing stm32f4xx_sdio.o(.text.SDIO_ClearITPendingBit), (12 bytes).
+    Removing stm32f4xx_sdio.o(.text.SDIO_ClearITPendingBit), (20 bytes).
     Removing stm32f4xx_sdio.o(.ARM.exidx.text.SDIO_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_spdifrx.o(.text), (0 bytes).
     Removing stm32f4xx_spi.o(.text), (0 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_DeInit), (202 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_DeInit), (248 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_DeInit), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_Init), (70 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_Init), (104 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_Init), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.I2S_Init), (230 bytes).
+    Removing stm32f4xx_spi.o(.text.I2S_Init), (498 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.I2S_Init), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_StructInit), (16 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_StructInit), (48 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_StructInit), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.I2S_StructInit), (14 bytes).
+    Removing stm32f4xx_spi.o(.text.I2S_StructInit), (36 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.I2S_StructInit), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_Cmd), (20 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_Cmd), (44 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_Cmd), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.I2S_Cmd), (20 bytes).
+    Removing stm32f4xx_spi.o(.text.I2S_Cmd), (44 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.I2S_Cmd), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_DataSizeConfig), (16 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_DataSizeConfig), (34 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_DataSizeConfig), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_BiDirectionalLineConfig), (24 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_BiDirectionalLineConfig), (48 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_BiDirectionalLineConfig), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_NSSInternalSoftwareConfig), (24 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_NSSInternalSoftwareConfig), (50 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_NSSInternalSoftwareConfig), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_SSOutputCmd), (20 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_SSOutputCmd), (44 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_SSOutputCmd), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_TIModeCmd), (20 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_TIModeCmd), (44 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_TIModeCmd), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.I2S_FullDuplexConfig), (72 bytes).
+    Removing stm32f4xx_spi.o(.text.I2S_FullDuplexConfig), (150 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.I2S_FullDuplexConfig), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_ReceiveData), (4 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_ReceiveData), (12 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_ReceiveData), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_SendData), (4 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_SendData), (20 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_SendData), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_CalculateCRC), (20 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_CalculateCRC), (44 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_CalculateCRC), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_TransmitCRC), (10 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_TransmitCRC), (18 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_TransmitCRC), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_GetCRC), (12 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_GetCRC), (52 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_GetCRC), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_GetCRCPolynomial), (4 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_GetCRCPolynomial), (12 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_GetCRCPolynomial), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_DMACmd), (16 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_DMACmd), (52 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_DMACmd), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_ITConfig), (24 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_ITConfig), (84 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_ITConfig), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_GetFlagStatus), (10 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_GetFlagStatus), (54 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_ClearFlag), (6 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_ClearFlag), (22 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_ClearFlag), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_GetITStatus), (34 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_GetITStatus), (126 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_GetITStatus), (8 bytes).
-    Removing stm32f4xx_spi.o(.text.SPI_I2S_ClearITPendingBit), (16 bytes).
+    Removing stm32f4xx_spi.o(.text.SPI_I2S_ClearITPendingBit), (44 bytes).
     Removing stm32f4xx_spi.o(.ARM.exidx.text.SPI_I2S_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_syscfg.o(.text), (0 bytes).
-    Removing stm32f4xx_syscfg.o(.text.SYSCFG_DeInit), (24 bytes).
+    Removing stm32f4xx_syscfg.o(.text.SYSCFG_DeInit), (28 bytes).
     Removing stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_DeInit), (8 bytes).
-    Removing stm32f4xx_syscfg.o(.text.SYSCFG_MemoryRemapConfig), (12 bytes).
+    Removing stm32f4xx_syscfg.o(.text.SYSCFG_MemoryRemapConfig), (24 bytes).
     Removing stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_MemoryRemapConfig), (8 bytes).
-    Removing stm32f4xx_syscfg.o(.text.SYSCFG_MemorySwappingBank), (10 bytes).
+    Removing stm32f4xx_syscfg.o(.text.SYSCFG_MemorySwappingBank), (22 bytes).
     Removing stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_MemorySwappingBank), (8 bytes).
-    Removing stm32f4xx_syscfg.o(.text.SYSCFG_EXTILineConfig), (48 bytes).
+    Removing stm32f4xx_syscfg.o(.text.SYSCFG_EXTILineConfig), (86 bytes).
     Removing stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_EXTILineConfig), (8 bytes).
-    Removing stm32f4xx_syscfg.o(.text.SYSCFG_ETH_MediaInterfaceConfig), (10 bytes).
+    Removing stm32f4xx_syscfg.o(.text.SYSCFG_ETH_MediaInterfaceConfig), (18 bytes).
     Removing stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_ETH_MediaInterfaceConfig), (8 bytes).
-    Removing stm32f4xx_syscfg.o(.text.SYSCFG_CompensationCellCmd), (12 bytes).
+    Removing stm32f4xx_syscfg.o(.text.SYSCFG_CompensationCellCmd), (24 bytes).
     Removing stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_CompensationCellCmd), (8 bytes).
-    Removing stm32f4xx_syscfg.o(.text.SYSCFG_GetCompensationCellStatus), (16 bytes).
+    Removing stm32f4xx_syscfg.o(.text.SYSCFG_GetCompensationCellStatus), (50 bytes).
     Removing stm32f4xx_syscfg.o(.ARM.exidx.text.SYSCFG_GetCompensationCellStatus), (8 bytes).
     Removing stm32f4xx_tim.o(.text), (0 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_DeInit), (432 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_DeInit), (540 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_DeInit), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_TimeBaseInit), (146 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_TimeBaseInit), (270 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_TimeBaseInit), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_TimeBaseStructInit), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_TimeBaseStructInit), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_TimeBaseStructInit), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_PrescalerConfig), (6 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_PrescalerConfig), (32 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_PrescalerConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_CounterModeConfig), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_CounterModeConfig), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_CounterModeConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetCounter), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetCounter), (16 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetCounter), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetAutoreload), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetAutoreload), (16 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetAutoreload), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GetCounter), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GetCounter), (12 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetCounter), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GetPrescaler), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GetPrescaler), (12 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetPrescaler), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_UpdateDisableConfig), (20 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_UpdateDisableConfig), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_UpdateDisableConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_UpdateRequestConfig), (20 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_UpdateRequestConfig), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_UpdateRequestConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ARRPreloadConfig), (20 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ARRPreloadConfig), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ARRPreloadConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectOnePulseMode), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectOnePulseMode), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectOnePulseMode), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetClockDivision), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetClockDivision), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetClockDivision), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_Cmd), (18 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_Cmd), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_Cmd), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC1Init), (102 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC1Init), (304 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC1Init), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC2Init), (112 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC2Init), (318 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC2Init), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC3Init), (112 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC3Init), (316 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC3Init), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC4Init), (84 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC4Init), (234 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC4Init), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OCStructInit), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OCStructInit), (42 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OCStructInit), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectOCxM), (88 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectOCxM), (160 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectOCxM), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetCompare1), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetCompare1), (16 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetCompare1), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetCompare2), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetCompare2), (16 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetCompare2), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetCompare3), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetCompare3), (16 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetCompare3), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetCompare4), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetCompare4), (16 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetCompare4), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ForcedOC1Config), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ForcedOC1Config), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ForcedOC1Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ForcedOC2Config), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ForcedOC2Config), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ForcedOC2Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ForcedOC3Config), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ForcedOC3Config), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ForcedOC3Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ForcedOC4Config), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ForcedOC4Config), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ForcedOC4Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC1PreloadConfig), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC1PreloadConfig), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC1PreloadConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC2PreloadConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC2PreloadConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC2PreloadConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC3PreloadConfig), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC3PreloadConfig), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC3PreloadConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC4PreloadConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC4PreloadConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC4PreloadConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC1FastConfig), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC1FastConfig), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC1FastConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC2FastConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC2FastConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC2FastConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC3FastConfig), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC3FastConfig), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC3FastConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC4FastConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC4FastConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC4FastConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ClearOC1Ref), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ClearOC1Ref), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ClearOC1Ref), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ClearOC2Ref), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ClearOC2Ref), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ClearOC2Ref), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ClearOC3Ref), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ClearOC3Ref), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ClearOC3Ref), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ClearOC4Ref), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ClearOC4Ref), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ClearOC4Ref), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC1PolarityConfig), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC1PolarityConfig), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC1PolarityConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC1NPolarityConfig), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC1NPolarityConfig), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC1NPolarityConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC2PolarityConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC2PolarityConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC2PolarityConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC2NPolarityConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC2NPolarityConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC2NPolarityConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC3PolarityConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC3PolarityConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC3PolarityConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC3NPolarityConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC3NPolarityConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC3NPolarityConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_OC4PolarityConfig), (14 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_OC4PolarityConfig), (62 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_OC4PolarityConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_CCxCmd), (32 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_CCxCmd), (66 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_CCxCmd), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_CCxNCmd), (32 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_CCxNCmd), (66 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_CCxNCmd), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ICInit), (106 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ICInit), (148 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ICInit), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TI1_Config), (50 bytes).
+    Removing stm32f4xx_tim.o(.text.TI1_Config), (136 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TI1_Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetIC1Prescaler), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetIC1Prescaler), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetIC1Prescaler), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TI2_Config), (56 bytes).
+    Removing stm32f4xx_tim.o(.text.TI2_Config), (162 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TI2_Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetIC2Prescaler), (18 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetIC2Prescaler), (36 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetIC2Prescaler), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TI3_Config), (52 bytes).
+    Removing stm32f4xx_tim.o(.text.TI3_Config), (150 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TI3_Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetIC3Prescaler), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetIC3Prescaler), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetIC3Prescaler), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TI4_Config), (60 bytes).
+    Removing stm32f4xx_tim.o(.text.TI4_Config), (164 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TI4_Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SetIC4Prescaler), (18 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SetIC4Prescaler), (36 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SetIC4Prescaler), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ICStructInit), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ICStructInit), (32 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ICStructInit), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_PWMIConfig), (112 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_PWMIConfig), (190 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_PWMIConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GetCapture1), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GetCapture1), (12 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetCapture1), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GetCapture2), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GetCapture2), (12 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetCapture2), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GetCapture3), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GetCapture3), (12 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetCapture3), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GetCapture4), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GetCapture4), (12 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetCapture4), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_BDTRConfig), (40 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_BDTRConfig), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_BDTRConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_BDTRStructInit), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_BDTRStructInit), (38 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_BDTRStructInit), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_CtrlPWMOutputs), (24 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_CtrlPWMOutputs), (52 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_CtrlPWMOutputs), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectCOM), (20 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectCOM), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectCOM), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_CCPreloadControl), (18 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_CCPreloadControl), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_CCPreloadControl), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ITConfig), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ITConfig), (52 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ITConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GenerateEvent), (4 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GenerateEvent), (20 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GenerateEvent), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GetFlagStatus), (10 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GetFlagStatus), (54 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ClearFlag), (6 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ClearFlag), (22 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ClearFlag), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_GetITStatus), (20 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_GetITStatus), (90 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_GetITStatus), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ClearITPendingBit), (6 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ClearITPendingBit), (22 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ClearITPendingBit), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_DMAConfig), (8 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_DMAConfig), (32 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_DMAConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_DMACmd), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_DMACmd), (52 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_DMACmd), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectCCDMA), (20 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectCCDMA), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectCCDMA), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_InternalClockConfig), (10 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_InternalClockConfig), (18 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_InternalClockConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ITRxExternalClockConfig), (18 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ITRxExternalClockConfig), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ITRxExternalClockConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectInputTrigger), (12 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectInputTrigger), (60 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectInputTrigger), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_TIxExternalClockConfig), (44 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_TIxExternalClockConfig), (88 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_TIxExternalClockConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ETRClockMode1Config), (18 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ETRClockMode1Config), (110 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ETRClockMode1Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ETRConfig), (22 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ETRConfig), (78 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ETRConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_ETRClockMode2Config), (18 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_ETRClockMode2Config), (50 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_ETRClockMode2Config), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectOutputTrigger), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectOutputTrigger), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectOutputTrigger), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectSlaveMode), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectSlaveMode), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectSlaveMode), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectMasterSlaveMode), (16 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectMasterSlaveMode), (34 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectMasterSlaveMode), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_EncoderInterfaceConfig), (48 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_EncoderInterfaceConfig), (170 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_EncoderInterfaceConfig), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_SelectHallSensor), (20 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_SelectHallSensor), (44 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_SelectHallSensor), (8 bytes).
-    Removing stm32f4xx_tim.o(.text.TIM_RemapConfig), (6 bytes).
+    Removing stm32f4xx_tim.o(.text.TIM_RemapConfig), (22 bytes).
     Removing stm32f4xx_tim.o(.ARM.exidx.text.TIM_RemapConfig), (8 bytes).
     Removing stm32f4xx_usart.o(.text), (0 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_DeInit), (274 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_DeInit), (324 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_DeInit), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_Init), (186 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_Init), (354 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_Init), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_StructInit), (18 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_StructInit), (40 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_StructInit), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_ClockInit), (34 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_ClockInit), (56 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_ClockInit), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_ClockStructInit), (8 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_ClockStructInit), (26 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_ClockStructInit), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_Cmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_Cmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_Cmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_SetPrescaler), (16 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_SetPrescaler), (34 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_SetPrescaler), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_OverSampling8Cmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_OverSampling8Cmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_OverSampling8Cmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_OneBitMethodCmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_OneBitMethodCmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_OneBitMethodCmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_SendData), (8 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_SendData), (24 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_SendData), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_ReceiveData), (8 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_ReceiveData), (16 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_ReceiveData), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_SetAddress), (16 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_SetAddress), (34 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_SetAddress), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_ReceiverWakeUpCmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_ReceiverWakeUpCmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_ReceiverWakeUpCmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_WakeUpConfig), (16 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_WakeUpConfig), (34 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_WakeUpConfig), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_LINBreakDetectLengthConfig), (16 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_LINBreakDetectLengthConfig), (34 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_LINBreakDetectLengthConfig), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_LINCmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_LINCmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_LINCmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_SendBreak), (10 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_SendBreak), (18 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_SendBreak), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_HalfDuplexCmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_HalfDuplexCmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_HalfDuplexCmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_SetGuardTime), (16 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_SetGuardTime), (34 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_SetGuardTime), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_SmartCardCmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_SmartCardCmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_SmartCardCmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_SmartCardNACKCmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_SmartCardNACKCmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_SmartCardNACKCmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_IrDAConfig), (16 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_IrDAConfig), (34 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_IrDAConfig), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_IrDACmd), (20 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_IrDACmd), (44 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_IrDACmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_DMACmd), (16 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_DMACmd), (52 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_DMACmd), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_ITConfig), (46 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_ITConfig), (146 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_ITConfig), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_GetFlagStatus), (10 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_GetFlagStatus), (68 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_GetFlagStatus), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_ClearFlag), (6 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_ClearFlag), (36 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_ClearFlag), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_GetITStatus), (48 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_GetITStatus), (176 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_GetITStatus), (8 bytes).
-    Removing stm32f4xx_usart.o(.text.USART_ClearITPendingBit), (14 bytes).
+    Removing stm32f4xx_usart.o(.text.USART_ClearITPendingBit), (68 bytes).
     Removing stm32f4xx_usart.o(.ARM.exidx.text.USART_ClearITPendingBit), (8 bytes).
     Removing stm32f4xx_wwdg.o(.text), (0 bytes).
-    Removing stm32f4xx_wwdg.o(.text.WWDG_DeInit), (24 bytes).
+    Removing stm32f4xx_wwdg.o(.text.WWDG_DeInit), (28 bytes).
     Removing stm32f4xx_wwdg.o(.ARM.exidx.text.WWDG_DeInit), (8 bytes).
-    Removing stm32f4xx_wwdg.o(.text.WWDG_SetPrescaler), (20 bytes).
+    Removing stm32f4xx_wwdg.o(.text.WWDG_SetPrescaler), (40 bytes).
     Removing stm32f4xx_wwdg.o(.ARM.exidx.text.WWDG_SetPrescaler), (8 bytes).
-    Removing stm32f4xx_wwdg.o(.text.WWDG_SetWindowValue), (40 bytes).
+    Removing stm32f4xx_wwdg.o(.text.WWDG_SetWindowValue), (48 bytes).
     Removing stm32f4xx_wwdg.o(.ARM.exidx.text.WWDG_SetWindowValue), (8 bytes).
     Removing stm32f4xx_wwdg.o(.text.WWDG_EnableIT), (14 bytes).
     Removing stm32f4xx_wwdg.o(.ARM.exidx.text.WWDG_EnableIT), (8 bytes).
-    Removing stm32f4xx_wwdg.o(.text.WWDG_SetCounter), (16 bytes).
+    Removing stm32f4xx_wwdg.o(.text.WWDG_SetCounter), (28 bytes).
     Removing stm32f4xx_wwdg.o(.ARM.exidx.text.WWDG_SetCounter), (8 bytes).
-    Removing stm32f4xx_wwdg.o(.text.WWDG_Enable), (16 bytes).
+    Removing stm32f4xx_wwdg.o(.text.WWDG_Enable), (28 bytes).
     Removing stm32f4xx_wwdg.o(.ARM.exidx.text.WWDG_Enable), (8 bytes).
-    Removing stm32f4xx_wwdg.o(.text.WWDG_GetFlagStatus), (18 bytes).
+    Removing stm32f4xx_wwdg.o(.text.WWDG_GetFlagStatus), (46 bytes).
     Removing stm32f4xx_wwdg.o(.ARM.exidx.text.WWDG_GetFlagStatus), (8 bytes).
     Removing stm32f4xx_wwdg.o(.text.WWDG_ClearFlag), (14 bytes).
     Removing stm32f4xx_wwdg.o(.ARM.exidx.text.WWDG_ClearFlag), (8 bytes).
     Removing system_stm32f4xx.o(.text), (0 bytes).
     Removing system_stm32f4xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
-    Removing system_stm32f4xx.o(.text.SystemCoreClockUpdate), (126 bytes).
+    Removing system_stm32f4xx.o(.text.SystemCoreClockUpdate), (302 bytes).
     Removing system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
     Removing system_stm32f4xx.o(.data.SystemCoreClock), (4 bytes).
     Removing system_stm32f4xx.o(.rodata.AHBPrescTable), (16 bytes).
     Removing system_stm32f4xx.o(.rodata.APBPrescTable), (8 bytes).
 
-1396 unused section(s) (total 33040 bytes) removed from the image.
+1398 unused section(s) (total 61316 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2451,10 +2451,6 @@ Image Symbol Table
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
@@ -2572,9 +2568,11 @@ Image Symbol Table
     .text                                    0x080002d4   Section        2  use_no_semi.o(.text)
     .text                                    0x080002d6   Section        0  indicate_semi.o(.text)
     [Anonymous Symbol]                       0x080002d8   Section        0  system_stm32f4xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x080002ec   Section        0  main.o(.text.main)
-    $v0                                      0x0800031a   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x0800031a   Section       26  fpinit.o(x$fpl$fpinit)
+    [Anonymous Symbol]                       0x080002ec   Section        0  main.o(.text.delay)
+    [Anonymous Symbol]                       0x08000308   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x0800036c   Section        0  main.o(.text.port_init)
+    $v0                                      0x080003a4   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x080003a4   Section       26  fpinit.o(x$fpl$fpinit)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000060   Data         512  startup_stm32f411xe.o(HEAP)
     HEAP                                     0x20000060   Section      512  startup_stm32f411xe.o(HEAP)
@@ -2586,7 +2584,7 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
     __ARM_exceptions_init                     - Undefined Weak Reference
     __alloca_initialize                       - Undefined Weak Reference
     __arm_preinit_                            - Undefined Weak Reference
@@ -2746,12 +2744,14 @@ Image Symbol Table
     __use_no_semihosting_swi                 0x080002d5   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x080002d7   Thumb Code     0  indicate_semi.o(.text)
     SystemInit                               0x080002d9   Thumb Code    18  system_stm32f4xx.o(.text.SystemInit)
-    main                                     0x080002ed   Thumb Code    46  main.o(.text.main)
-    _fp_init                                 0x0800031b   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08000333   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08000333   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x08000334   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000344   Number         0  anon$$obj.o(Region$$Table)
+    delay                                    0x080002ed   Thumb Code    26  main.o(.text.delay)
+    main                                     0x08000309   Thumb Code   100  main.o(.text.main)
+    port_init                                0x0800036d   Thumb Code    56  main.o(.text.port_init)
+    _fp_init                                 0x080003a5   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x080003bd   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x080003bd   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x080003c0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080003d0   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
 
@@ -2763,87 +2763,91 @@ Memory Map of the image
 
   Image Entry point : 0x0800021d
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x00000344, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000003d0, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000344, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000003d0, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x00000198   Data   RO         1627    RESET               startup_stm32f411xe.o
-    0x08000198   0x08000198   0x00000008   Code   RO         1659  * !!!main             c_w.l(__main.o)
-    0x080001a0   0x080001a0   0x00000034   Code   RO         1824    !!!scatter          c_w.l(__scatter.o)
-    0x080001d4   0x080001d4   0x0000001c   Code   RO         1826    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x080001f0   0x080001f0   0x00000002   Code   RO         1688    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x080001f2   0x080001f2   0x00000004   Code   RO         1694    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1697    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1700    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1702    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1704    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1707    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1709    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1711    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1713    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1715    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1717    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1719    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1721    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1723    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1725    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1727    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1731    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1733    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1735    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000000   Code   RO         1737    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x080001f6   0x080001f6   0x00000002   Code   RO         1738    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x080001f8   0x080001f8   0x00000002   Code   RO         1760    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x080001fa   0x080001fa   0x00000000   Code   RO         1775    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x080001fa   0x080001fa   0x00000000   Code   RO         1777    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x080001fa   0x080001fa   0x00000000   Code   RO         1780    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x080001fa   0x080001fa   0x00000000   Code   RO         1783    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x080001fa   0x080001fa   0x00000000   Code   RO         1785    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x080001fa   0x080001fa   0x00000000   Code   RO         1788    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x080001fa   0x080001fa   0x00000002   Code   RO         1789    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x080001fc   0x080001fc   0x00000000   Code   RO         1661    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x080001fc   0x080001fc   0x00000000   Code   RO         1665    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x080001fc   0x080001fc   0x00000006   Code   RO         1677    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x08000202   0x08000202   0x00000000   Code   RO         1667    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x08000202   0x08000202   0x00000004   Code   RO         1668    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x08000206   0x08000206   0x00000000   Code   RO         1670    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x08000206   0x08000206   0x00000008   Code   RO         1671    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x0800020e   0x0800020e   0x00000002   Code   RO         1692    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x08000210   0x08000210   0x00000000   Code   RO         1740    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x08000210   0x08000210   0x00000004   Code   RO         1741    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x08000214   0x08000214   0x00000006   Code   RO         1742    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000000   0x08000000   0x00000198   Data   RO         1601    RESET               startup_stm32f411xe.o
+    0x08000198   0x08000198   0x00000008   Code   RO         1626  * !!!main             c_w.l(__main.o)
+    0x080001a0   0x080001a0   0x00000034   Code   RO         1789    !!!scatter          c_w.l(__scatter.o)
+    0x080001d4   0x080001d4   0x0000001c   Code   RO         1791    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x080001f0   0x080001f0   0x00000002   Code   RO         1653    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x080001f2   0x080001f2   0x00000004   Code   RO         1659    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1662    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1665    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1667    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1669    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1672    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1674    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1676    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1678    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1680    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1682    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1684    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1686    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1688    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1690    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1692    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1696    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1698    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1700    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000000   Code   RO         1702    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x080001f6   0x080001f6   0x00000002   Code   RO         1703    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x080001f8   0x080001f8   0x00000002   Code   RO         1725    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x080001fa   0x080001fa   0x00000000   Code   RO         1740    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x080001fa   0x080001fa   0x00000000   Code   RO         1742    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x080001fa   0x080001fa   0x00000000   Code   RO         1745    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x080001fa   0x080001fa   0x00000000   Code   RO         1748    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x080001fa   0x080001fa   0x00000000   Code   RO         1750    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x080001fa   0x080001fa   0x00000000   Code   RO         1753    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x080001fa   0x080001fa   0x00000002   Code   RO         1754    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x080001fc   0x080001fc   0x00000000   Code   RO         1628    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x080001fc   0x080001fc   0x00000000   Code   RO         1630    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x080001fc   0x080001fc   0x00000006   Code   RO         1642    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x08000202   0x08000202   0x00000000   Code   RO         1632    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x08000202   0x08000202   0x00000004   Code   RO         1633    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO         1635    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000206   0x08000206   0x00000008   Code   RO         1636    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800020e   0x0800020e   0x00000002   Code   RO         1657    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000210   0x08000210   0x00000000   Code   RO         1705    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000210   0x08000210   0x00000004   Code   RO         1706    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000214   0x08000214   0x00000006   Code   RO         1707    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0800021a   0x0800021a   0x00000002   PAD
-    0x0800021c   0x0800021c   0x00000040   Code   RO         1628  * .text               startup_stm32f411xe.o
-    0x0800025c   0x0800025c   0x00000006   Code   RO         1657    .text               c_w.l(heapauxi.o)
-    0x08000262   0x08000262   0x0000004a   Code   RO         1679    .text               c_w.l(sys_stackheap_outer.o)
-    0x080002ac   0x080002ac   0x00000012   Code   RO         1681    .text               c_w.l(exit.o)
+    0x0800021c   0x0800021c   0x00000040   Code   RO         1602  * .text               startup_stm32f411xe.o
+    0x0800025c   0x0800025c   0x00000006   Code   RO         1624    .text               c_w.l(heapauxi.o)
+    0x08000262   0x08000262   0x0000004a   Code   RO         1644    .text               c_w.l(sys_stackheap_outer.o)
+    0x080002ac   0x080002ac   0x00000012   Code   RO         1646    .text               c_w.l(exit.o)
     0x080002be   0x080002be   0x00000002   PAD
-    0x080002c0   0x080002c0   0x00000008   Code   RO         1689    .text               c_w.l(libspace.o)
-    0x080002c8   0x080002c8   0x0000000c   Code   RO         1750    .text               c_w.l(sys_exit.o)
-    0x080002d4   0x080002d4   0x00000002   Code   RO         1765    .text               c_w.l(use_no_semi.o)
-    0x080002d6   0x080002d6   0x00000000   Code   RO         1767    .text               c_w.l(indicate_semi.o)
+    0x080002c0   0x080002c0   0x00000008   Code   RO         1654    .text               c_w.l(libspace.o)
+    0x080002c8   0x080002c8   0x0000000c   Code   RO         1715    .text               c_w.l(sys_exit.o)
+    0x080002d4   0x080002d4   0x00000002   Code   RO         1730    .text               c_w.l(use_no_semi.o)
+    0x080002d6   0x080002d6   0x00000000   Code   RO         1732    .text               c_w.l(indicate_semi.o)
     0x080002d6   0x080002d6   0x00000002   PAD
-    0x080002d8   0x080002d8   0x00000012   Code   RO         1635    .text.SystemInit    system_stm32f4xx.o
+    0x080002d8   0x080002d8   0x00000012   Code   RO         1609    .text.SystemInit    system_stm32f4xx.o
     0x080002ea   0x080002ea   0x00000002   PAD
-    0x080002ec   0x080002ec   0x0000002e   Code   RO            2    .text.main          main.o
-    0x0800031a   0x0800031a   0x0000001a   Code   RO         1748    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08000334   0x08000334   0x00000010   Data   RO         1823    Region$$Table       anon$$obj.o
+    0x080002ec   0x080002ec   0x0000001a   Code   RO            4    .text.delay         main.o
+    0x08000306   0x08000306   0x00000002   PAD
+    0x08000308   0x08000308   0x00000064   Code   RO            6    .text.main          main.o
+    0x0800036c   0x0800036c   0x00000038   Code   RO            2    .text.port_init     main.o
+    0x080003a4   0x080003a4   0x0000001a   Code   RO         1713    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x080003be   0x080003be   0x00000002   PAD
+    0x080003c0   0x080003c0   0x00000010   Data   RO         1788    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000344, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080003d0, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x08000344, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080003d0, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000        -       0x00000060   Zero   RW         1690    .bss                c_w.l(libspace.o)
-    0x20000060        -       0x00000200   Zero   RW         1626    HEAP                startup_stm32f411xe.o
-    0x20000260        -       0x00000400   Zero   RW         1625    STACK               startup_stm32f411xe.o
+    0x20000000        -       0x00000060   Zero   RW         1655    .bss                c_w.l(libspace.o)
+    0x20000060        -       0x00000200   Zero   RW         1600    HEAP                startup_stm32f411xe.o
+    0x20000260        -       0x00000400   Zero   RW         1599    STACK               startup_stm32f411xe.o
 
 
 ==============================================================================
@@ -2853,14 +2857,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        46          0          0          0          0       1565   main.o
+       182          0          0          0          0       1888   main.o
         64         26        408          0       1536        856   startup_stm32f411xe.o
-        18          0          0          0          0       2722   system_stm32f4xx.o
+        18          0          0          0          0       2600   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-       130         26        424          0       1536       5143   Object Totals
+       268         26        424          0       1536       5344   Object Totals
          0          0         16          0          0          0   (incl. Generated)
-         2          0          0          0          0          0   (incl. Padding)
+         4          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2888,8 +2892,8 @@ Image component sizes
         26          0          0          0          0        116   fpinit.o
 
     ----------------------------------------------------------------------
-       282         16          0          0         96        700   Library Totals
-         6          0          0          0          0          0   (incl. Padding)
+       284         16          0          0         96        700   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2899,7 +2903,7 @@ Image component sizes
         26          0          0          0          0        116   fz_wm.l
 
     ----------------------------------------------------------------------
-       282         16          0          0         96        700   Library Totals
+       284         16          0          0         96        700   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2908,15 +2912,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       412         42        424          0       1632       5599   Grand Totals
-       412         42        424          0       1632       5599   ELF Image Totals
-       412         42        424          0          0          0   ROM Totals
+       552         42        424          0       1632       5800   Grand Totals
+       552         42        424          0       1632       5800   ELF Image Totals
+       552         42        424          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                  836 (   0.82kB)
+    Total RO  Size (Code + RO Data)                  976 (   0.95kB)
     Total RW  Size (RW Data + ZI Data)              1632 (   1.59kB)
-    Total ROM Size (Code + RO Data + RW Data)        836 (   0.82kB)
+    Total ROM Size (Code + RO Data + RW Data)        976 (   0.95kB)
 
 ==============================================================================
 

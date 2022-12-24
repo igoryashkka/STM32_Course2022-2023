@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>0</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -387,6 +387,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\user\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\main.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -607,6 +612,11 @@
               <FileName>stm32f4xx_conf.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\pl\stm32f4xx_conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>ports.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\ports.h</FilePath>
             </File>
           </Files>
         </Group>

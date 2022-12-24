@@ -1,4 +1,4 @@
-./objects/main.o: user\main.c pl\stm32f4xx.h \
+./objects/main.o: user\main.c user\main.h pl\stm32f4xx.h \
   C:\Users\igor4\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Users\igor4\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h \
@@ -13,4 +13,5 @@
   pl\inc\stm32f4xx_pwr.h pl\inc\stm32f4xx_rcc.h pl\inc\stm32f4xx_rtc.h \
   pl\inc\stm32f4xx_sdio.h pl\inc\stm32f4xx_spi.h \
   pl\inc\stm32f4xx_syscfg.h pl\inc\stm32f4xx_tim.h \
-  pl\inc\stm32f4xx_usart.h pl\inc\stm32f4xx_wwdg.h pl\inc\misc.h
+  pl\inc\stm32f4xx_usart.h pl\inc\stm32f4xx_wwdg.h pl\inc\misc.h \
+  user\ports.h

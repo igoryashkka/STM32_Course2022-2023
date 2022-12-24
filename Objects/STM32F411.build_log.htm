@@ -22,12 +22,13 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 C:\Users\igor4\STM32F411\STM32F411.uvprojx
-Project File Date:  12/23/2022
+Project File Date:  12/24/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-user/main.c(2): warning: In file included from...
+user/main.c(1): warning: In file included from...
+./user/main.h(5): warning: In file included from...
 ./pl\stm32f4xx.h(2044): warning: 'STM32F427_437xx' is not defined, evaluates to 0 [-Wundef]
 #if defined (STM32F40_41xxx) || (STM32F427_437xx) || (STM32F429_439xx) || (STM32F410xx) || (STM32F412xG) || (STM32F413_423xx) || (STM32F446xx) || (STM32F469_479xx)
                                  ^
@@ -82,7 +83,7 @@ user/main.c(2): warning: In file included from...
 12 warnings generated.
 compiling main.c...
 linking...
-Program Size: Code=412 RO-data=424 RW-data=0 ZI-data=1632  
+Program Size: Code=552 RO-data=424 RW-data=0 ZI-data=1632  
 ".\Objects\STM32F411.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -114,7 +115,7 @@ Package Vendor: Keil
       Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f411xe.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
